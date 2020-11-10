@@ -48,7 +48,7 @@
 
 									Try adding "border-radius: 50%;" to the style attribute.
 								-->
-								<img src="images/Astronomy.jpg" style="width:280px; height:280px; object-fit: cover;">
+								<img src="images/banner.jpg" style="width:100%;  object-fit: cover;">
 								<!-- 	Here is a paragraph where you can put your position and institution, or
 									a short line about yourself.
 								-->
@@ -77,7 +77,7 @@
 									<a href="#research">Research</a>
 								</li>
 								<li>
-									<a href="#Community">Community</a>
+									<a href="#community">Community</a>
 								</li>
 								<li>
 									<a href="#contact">Contact</a>
@@ -107,7 +107,7 @@
 							<p>
 								<!-- Items contained in <b> tags are bolded! -->
 							<p>
-								<b>Research Interests:</b> Time-domain astronomy, optical imaging surveys, eclipsing white dwarf binaries, machine learning, fast transients.
+								<b>Research Interests:</b> Time-domain astronomy, eclipsing white dwarf binaries, data mining & machine learning, optical imaging surveys, fast transients.
                                 
 							</p>
 							<p>
@@ -115,17 +115,17 @@
 						</p>
 
 								<b>Education:</b>
-                                <h5>PhD Thesis</h5>
-                                <p> For my <a href="./Documents/Thesis_JvanRoestel.pdf"> PhD research</a> (also <a href="http://hdl.handle.net/2066/197982">here</a>) at Radboud University, I used the Palomar Transient Factory (PTF) to study the optical variable sky. The first half focusses on fast optical transients. The second half is about eclipsing white dwarf binary systems in the PTF data.
+                                <h5>PhD Astrophysics </h5>
+                                <p> As a graduate student at Radboud University, I used the Palomar Transient Factory (PTF) to study the optical variable sky <a href="./Documents/Thesis_JvanRoestel.pdf"> I used the Palomar Transient Factory (PTF) to study the optical variable sky </a> (also <a href="http://hdl.handle.net/2066/197982">here</a>). The first half focusses on fast optical transients. The second half is about eclipsing white dwarf binary systems in the PTF data.
                                 </p>  
 
-                                <h5>Master thesis</h5>
-                                <p> The subject of my <a href="./Documents/main.pdf"> Master Thesis</a> is PTF1108ag, a new eclipsing white dwarf - red dwarf binary star. This research was carried out during 2012-2013, the second year of my Master education at the Radboud University Nijmegen under supervision of Paul Groot.
+                                <h5> MSc Astrophysics </h5>
+                                <p> I obtained my Master degree from Radboud University Nijmegen (NL). I also attended courses at the University of Amsterdam and Leuven University (BE). The subject of my <a href="./Documents/main.pdf"> Master Thesis</a> is PTF1108ag, a new eclipsing white dwarf - red dwarf binary star.
 
                                 </p>  
 
-                                <h5>Bachelor project</h5>
-                                <p> A the end of my Bachelor education at Radboud University Nijmegen, I did a 3 month  <a href="./Documents/bachelor_thesis.pdf"> project</a>. under supervision of Gijs Nelemans, analysing spectra of pulsating SdO star SDSS J160043.6+074802.9 (<a href="http://arxiv.org/abs/astro-ph/0607171"> Woudt et al. 2006</a>). 
+                                <h5> BSc Physics </h5>
+                                <p> I obtained a Bachelor degree in physics and astronomy from Radboud University Nijmegen (NL), I did a 3 month  <a href="./Documents/bachelor_thesis.pdf"> project</a>. under supervision of Gijs Nelemans, analysing spectra of pulsating SdO star SDSS J160043.6+074802.9 (<a href="http://arxiv.org/abs/astro-ph/0607171"> Woudt et al. 2006</a>). 
 							</p>
 
 						</article>
@@ -140,11 +140,39 @@
 								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
 									the next line.
 								-->
-								<b>Project I Title</b><br>Project description, including further links to posters, talks, publications.
+								<b>ZTF variable star classification</b><br>Periodic variability is one of the most important tools used to study stellar physics. In addition, objects in a close orbit (exoplanets or other stars) can periodically block some of the light of the star. Finding exoplanets is important in order to answer investigate how common life is in our Galaxy. A binary star can significantly change the evolution of both stars and can result in many exotic explosions, the key science project for ZTF. Currently, I am working on a data analysis pipeline to categorise all variable stars ZTF observed. This involves the use of traditional methods (period-finding using GPUs), and also involve novel methods like machine learning classification.
 							</p>
+
 							<p>
-								<b>Project II Title</b><br>Project description, including further links to posters, talks, publications.
+								<b>Eclipsing AM CVn stars</b><br> AM CVn-type systems are ultra-compact, hydrogen-deficient accreting binaries with degenerate or semi-
+degenerate donors. The biggest open question regarding AM CVn binaries is the formation channel
+(white dwarf, Helium star, or evolved CV channel). By searching ZTF data, I've discovered 4 new eclipsing AM CVn systems, more than doubling the known sample. With high cadence followup lightcurve, I've been able to constrain the donor mass and radius, which shows that the donors are large (have a high entropy). Combined with spectroscopy, this suggests that these systems have been formed through the white dwarf channel.
 							</p>
+
+							<span class="image main">
+								<img src="images/amcvn.jpg" alt="credit:caltech"/>
+							</span>
+
+								<b>Dark companions of white dwarfs</b><br> 
+White dwarfs binaries with dark, low-mass companions; red dwarfs, brown-dwarfs and exoplanets (dM, BD,
+planet) are important in a broad range of astrophysical contexts. They are a tool to accurately measure white dwarf properties, study processes of binary evolution, are progenitors and final fate of cataclysmic variables, are potentially SNIa progenitor candidates, emit gravitational wave radiation, and in the case of planet companions, represent the final fate of the solar-system. With ZTF, we have now found 604 new non-acreting eclipsing WD systems with low-mass companions, a 8-fold increase over the currently published sample. I'm currently working on characterizing different subset of this sample; period bouncers, magnetic white dwarfs and planet candidates.
+							</p>
+
+							<h3 class="major">Old work</h3>
+
+							<p>
+								<b> Sky2Night, a search for fast PTF transients </b><br> For my PhD research worked on the Sky2Night project with the Palomar Transient Factory. The motivation for the Sky2Night project was twofold. The first is exploration: with automated survey telescopes, many new types of transients have been discovered. These new transients were typically visible for a few weeks. One goal of the Sky2Night projects was to determine if there are also unknown types of transients which are visible for only a few hours. The second motivation was the prospect of finding kilonovae, the optical transient caused by two merging neutron stars. Merging neutron stars emit gravitational waves, which can be detected by gravitational wave observatories (aLIGO & Virgo). However, when aLIGO & Virgo detect the gravitational waves emitted by a binary neutron star merger, they can only give a rough indication were this merger occurred in the sky. Therefore, if we want to find the kilonova, a large area needs to be searched to find it. Such a large area contains many other transients besides the kilonovae. The second goal of the Sky2Night project is to determine what these other transients are and how to recognise them.
+							</p>
+
+
+
+                            <b>EL CVn binaries </b><br> EL CVn binaries are eclipsing pre-white dwarfs and A-main sequence stars. The light curve of these systems shows shallow eclipses, 10% or less, and the targets are relatively blue. This type of binary was first discovered by the Kepler satellite. Indications are that these systems are quite common, and SWASP found 17 of these systems (V<13). I used PTF light curve statistics and Pan-STARRS colours to find new systems. I trained a machine learning classifier to find more of these systems. In total, 36 new EL CVn binaries were found in the PTF light curve database. The figure shows a 3D view of the colour parameter space and the location of the EL CVn systems. I have also applied ML methods to find more eclipsing WD-RD systems in the PTF database. These are shown as yellow in the 3D figure. Work is ongoing to use the successor of PTF, the Zwicky Transient Facility to classify all eclipsing binaries in the northern sky.
+							</p>
+
+							<span class="image main">
+								<img src="images/ELCVn.png" alt=""/>
+							</span>
+
 						</article>
 
 						<!-- Here is the "Community" card. -->
@@ -154,10 +182,11 @@
 								<img src="images/pic03.jpg" alt=""/>
 							</span>
 							<p>
-								<b>Teaching:</b>
+								<b>Teaching:</b> </br> As a PhD student, I was the student assistant (responsible for problem solving classes) for many physics and astromony courses. In addition, I organised classes for the 'C' programming courses for a number of years while workign on my PhD  </br> I've also supervised students who were doing a few month long science project. This includes two Bachelor students at Radboud university, and a SURF student at Caltech.
 							</p>
 							<p>
-								<b>Outreach:</b>
+								<b>Outreach:</b> </br> I've given prospective students and the general public telescopes tours at the Radboud University. This involved demonstrating the use of the two optical telescopes
+at the Radboud University and explaining what we study with optical telescopes.
 							</p>
 
 						</article>
@@ -169,9 +198,9 @@
 								<a href="mailto:jvanroes@caltech.edu">email: jvanroes@caltech.edu</a>
 							</p>
 							<p> 
-								<b>Visiting address: 1216 E California Boulevard, Pasadena, CA, USA
-								<br>Postal addres: 1200 California Boulevard, MLC 290-17, Pasadena, CA 91125, USA
-                                <br>Cahill building, room 354 </b>
+								<b>Visiting address:</b> 1216 E. California Blvd, Pasadena, CA, USA
+								<br><b>Postal addres:</b> 1200 E. California Blvd, MLC 290-17, Pasadena, CA 91125, USA
+                                <br><b>Caltech:</b> Cahill building, room 354 </b>
 
 							</p>
 
