@@ -101,13 +101,12 @@
 							<h2 class="major">About Me</h2>
 							<!-- Here is an image that you can customize for this page -->
 							<span class="image main">
-								<img src="images/pic01.jpg" alt=""/>
+								<img src="images/banner.jpg" alt=""/>
 							</span>
 							<!-- Here are three paragraphs where you can fill out information about yourself -->
-							<p>
 								<!-- Items contained in <b> tags are bolded! -->
 							<p>
-								<b>Current</b> I'm currently working at Caltech as a Postdoc on the ZTF project and work on my personal research focussed on white dwarf binaries. For ZTF, I work on the classification of variable objects and I'm the Galactic science working group lead for the ZTF collaboration.
+								<b>Current</b> I am currently working at Caltech as a Postdoc on the Zwicky Transient Facility project. My personal research focusses on observations of different kinds of white dwarf binaries. For ZTF, I work on the classification of variable objects and I'm the Galactic science working group lead for the ZTF collaboration.
 							</p>
 
 							<p>
@@ -138,17 +137,16 @@
 						<article id="research">
 							<h2 class="major">Research</h2>
 							<span class="image main">
-								<img src="images/pic02.jpg" alt=""/>
+								<img src="images/banner.jpg" alt=""/>
 							</span>
-							<p>
 								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
 									the next line.
 								-->
-
-								<li> 
-									<a href="#ZTFvariable">ZTF variable star classification</a>
+                                <p>My research involves two themes; the first are close white dwarf binary stars. In general, I am intrested in how close binary systems are formed, how their properties differ from isolated white dwarf, how mass-accretion in these systems manifests itself, and how these systems relate to astrophyscical transients, for example SNIa supernovae. There are many types of white dwarf binaries. Here are a few different types I have worked on:  
+<ul>
+								<li>
+									<a href="#WDRD">WD-RD</a>
 								</li>
-
 								<li>
 									<a href="#WDdarkcompanions">White dwarfs with dark companions</a>
 								</li>
@@ -160,11 +158,19 @@
 								<li>
 									<a href="#ELCVn">EL CVn binary stars</a>
 								</li>
+</ul>
+</p>
 
+<p>The second major topic is focussed on exploiting optical surveys to systematically study poputlation of different objects. Some of my graduate work focussed on finding fast transients with PTF. Currently, I am working on the classification of variable stars with ZTF.
+<ul>
+								<li> 
+									<a href="#ZTFvariable">ZTF variable star classification</a>
+								</li>
 								<li>
 									<a href="#Sky2Night">Sky2Night; a search for fast transients</a>
 								</li>
-
+</ul>
+</p>
 
 						</article>
 
@@ -179,10 +185,43 @@
 								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
 									the next line.
 								-->
-								<b>EL CVn binaries </b><br> EL CVn binaries are eclipsing pre-white dwarfs and A-main sequence stars. The light curve of these systems shows shallow eclipses, 10% or less, and the targets are relatively blue. This type of binary was first discovered by the Kepler satellite. Indications are that these systems are quite common, and SWASP found 17 of these systems (V\<13). I used PTF light curve statistics and Pan-STARRS colours to find new systems. I trained a machine learning classifier to find more of these systems. In total, 36 new EL CVn binaries were found in the PTF light curve database. The figure shows a 3D view of the colour parameter space and the location of the EL CVn systems. I have also applied ML methods to find more eclipsing WD-RD systems in the PTF database. These are shown as yellow in the 3D figure. Work is ongoing to use the successor of PTF, the Zwicky Transient Facility to classify all eclipsing binaries in the northern sky. This work was published in MNRAS <a href=https://ui.adsabs.harvard.edu/abs/2018MNRAS.475.2560V/abstract>here</a>. 
-							</p>
+								<b>Outbursting AM CVn stars</b><br> Similar to hydrogen-rich Cataclysmic variables, AM CVn systems with periods longer than 22 minutes show disk instability outbursts. Outbursts of AM CVn systems and hydrogen-rich CV appear very similar in the ZTF data. However, the counterparts are typically blue-er. We, therefore, obtained the Gaia and Pan-STARRS colours of all outbursting ZTF sources and show that most AM CVn systems are indeed blue. We obtained followup spectra of 35 blue, outbursting sources in ZTF and discovered 9 new AM CVn systems.							</p>
 
 						</article>
+
+
+						<article id="WDRD">
+							<h2 class="major">WD-RD binaries</h2>
+							<span class="image main">
+								<img src="images/WDRD.jpeg" alt=""/>
+							</span>
+							<p>
+								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
+									the next line.
+								-->
+								<b> White dwarf - red dwarf binaries</b><br> are the most common type of post-common envelope binary. My research focusses on finding and characterizing eclipsing systems. Eclipses are deep and easy to find, and can also be used the characterize the systems. 
+							</p>
+						</article>
+
+
+
+						<article id="ZTFvariable">
+							<h2 class="major">ZTFvariable</h2>
+							<span class="image main">
+                            <img src="images/amcvn.jpg" title="credit:caltech" alt=""/>
+							</span>
+							<p>
+								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
+									the next line.
+								-->
+
+								<b>ZTF variable star classification</b><br>Periodic variability is one of the most important tools used to study stellar physics. In addition, objects in a close orbit (exoplanets or other stars) can periodically block some of the light of the star. To study different classes of stars and to identify unusual objects, variable stars need to be classified. 
+ Currently, I am working with a team at Caltech to build an analysis pipeline to categorise all ZTF variable stars. This requires a concise definition of the different types of variable stars, the use of traditional methods like period-finding algorithms, and also involves novel methods like machine learning classification. See this <a href="https://scope.ztf.dev/">webpage</a> for more information.
+							</p>
+						</article>
+
+
+
 						<article id="Sky2Night">
 							<h2 class="major">Sky2Night</h2>
 							<span class="image main">
@@ -194,6 +233,11 @@
 								-->
 								<b>Sky2Night, a search for fast PTF transients </b><br> For my PhD research I worked on the Sky2Night project with the Palomar Transient Factory. The motivation for the Sky2Night project was twofold. The first is exploration: with automated survey telescopes, many new types of transients have been discovered. These new transients were typically visible for a few weeks. One goal of the Sky2Night projects was to determine if there are also unknown types of transients which are visible for only a few hours. The second motivation was the prospect of finding kilonovae, the optical transient caused by two merging neutron stars. Merging neutron stars emit gravitational waves, which can be detected by gravitational wave observatories (aLIGO & Virgo). However, when aLIGO & Virgo detect the gravitational waves emitted by a binary neutron star merger, they can only give a rough indication were this merger occurred in the sky. Therefore, if we want to find the kilonova, a large area needs to be searched to find it. Such a large area contains many other transients besides the kilonovae. The second goal of the Sky2Night project is to determine what these other transients are and how to recognise them.
 							</p>
+						</article>
+
+
+
+
 
 						</article>
 						<article id="AMCVn">
@@ -216,19 +260,10 @@ degenerate donors. The biggest open question regarding AM CVn binaries is the fo
 							</p>
 
 						</article>
-						<article id="ZTFvariable">
-							<h2 class="major">ZTFvariable</h2>
-							<span class="image main">
-                            <img src="images/amcvn.jpg" title="credit:caltech" alt=""/>
-							</span>
-							<p>
-								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
-									the next line.
-								-->
 
-								<b>ZTF variable star classification</b><br>Periodic variability is one of the most important tools used to study stellar physics. In addition, objects in a close orbit (exoplanets or other stars) can periodically block some of the light of the star. Finding exoplanets is important in order to answer investigate how common life is in our Galaxy. A binary star can significantly change the evolution of both stars and can result in many exotic explosions, the key science project for ZTF. Currently, I am working on a data analysis pipeline to categorise all variable stars ZTF observed. This involves the use of traditional methods (period-finding using GPUs), and also involve novel methods like machine learning classification.
-							</p>
-						</article>
+
+
+
 						<article id="WDdarkcompanions">
 							<h2 class="major">WDs & dark companions</h2>
 							<span class="image main">
@@ -248,8 +283,6 @@ We have been searching for dark, substellar companions around white dwarfs using
 							</span>
 
                            The video above shows high speed photometry of ZTFJ0038+2030; a white dwarf that is eclipsed every 10 hours by a substellar companion. Followup observations show that the companion is a very compact, old brown dwarf. 
-
-
 							</p>
 						</article>
 
@@ -258,10 +291,10 @@ We have been searching for dark, substellar companions around white dwarfs using
 						<article id="community">
 							<h2 class="major">Community</h2>
 							<span class="image main">
-								<img src="images/pic03.jpg" alt=""/>
+								<img src="images/banner.jpg" alt=""/>
 							</span>
 							<p>
-								<b>Teaching:</b> </br> As a PhD student, I was the student assistant (responsible for problem solving classes) for many physics and astromony courses. In addition, I organised classes for the 'C' programming courses for a number of years while workign on my PhD  </br> I've also supervised students who were doing a few month long science project. This includes two Bachelor students at Radboud university, and a SURF student at Caltech.
+								<b>Teaching:</b> </br> As a PhD student, I was the student assistant (responsible for problem solving classes) for many physics and astronomy courses. In addition, I organised classes for the 'C' programming courses for a number of years while working on my PhD  </br> I've also supervised students who were doing a few month long science project. This includes two Bachelor students at Radboud University, and summer intern (SURF) students at Caltech.
 							</p>
 							<p>
 								<b>Outreach:</b> </br> I've given prospective students and the general public telescopes tours at the Radboud University. This involved demonstrating the use of the two optical telescopes
