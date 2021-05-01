@@ -144,40 +144,106 @@
 								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
 									the next line.
 								-->
-								<b>ZTF variable star classification</b><br>Periodic variability is one of the most important tools used to study stellar physics. In addition, objects in a close orbit (exoplanets or other stars) can periodically block some of the light of the star. Finding exoplanets is important in order to answer investigate how common life is in our Galaxy. A binary star can significantly change the evolution of both stars and can result in many exotic explosions, the key science project for ZTF. Currently, I am working on a data analysis pipeline to categorise all variable stars ZTF observed. This involves the use of traditional methods (period-finding using GPUs), and also involve novel methods like machine learning classification.
-							</p>
 
-							<p>
-								<b>Eclipsing AM CVn stars</b><br> AM CVn-type systems are ultra-compact, hydrogen-deficient accreting binaries with degenerate or semi-
-degenerate donors. The biggest open question regarding AM CVn binaries is the formation channel
-(white dwarf, Helium star, or evolved CV channel). By searching ZTF data, I've discovered 4 new eclipsing AM CVn systems, more than doubling the known sample. With high cadence followup lightcurve, I've been able to constrain the donor mass and radius, which shows that the donors are large (have a high entropy). Combined with spectroscopy, this suggests that these systems have been formed through the white dwarf channel.
-							</p>
+								<li> 
+									<a href="#ZTFvariable">ZTF variable star classification</a>
+								</li>
 
-							<span class="image main">
-								<img src="images/amcvn.jpg" title="credit:caltech"/>
-							</span>
+								<li>
+									<a href="#WDdarkcompanions">White dwarfs with dark companions</a>
+								</li>
 
-								<b>Dark companions of white dwarfs</b><br> 
-White dwarfs binaries with dark, low-mass companions; red dwarfs, brown-dwarfs and exoplanets (dM, BD,
-planet) are important in a broad range of astrophysical contexts. They are a tool to accurately measure white dwarf properties, study processes of binary evolution, are progenitors and final fate of cataclysmic variables, are potentially SNIa progenitor candidates, emit gravitational wave radiation, and in the case of planet companions, represent the final fate of the solar-system. With ZTF, we have now found 604 new non-acreting eclipsing WD systems with low-mass companions, a 8-fold increase over the currently published sample. I'm currently working on characterizing different subset of this sample; period bouncers, magnetic white dwarfs and planet candidates.
-							</p>
+								<li>
+									<a href="#AMCVn">AM CVn binary stars</a>
+								</li>
 
-							<h3 class="major">Old work</h3>
+								<li>
+									<a href="#ELCVn">EL CVn binary stars</a>
+								</li>
 
-							<p>
-								<b> Sky2Night, a search for fast PTF transients </b><br> For my PhD research worked on the Sky2Night project with the Palomar Transient Factory. The motivation for the Sky2Night project was twofold. The first is exploration: with automated survey telescopes, many new types of transients have been discovered. These new transients were typically visible for a few weeks. One goal of the Sky2Night projects was to determine if there are also unknown types of transients which are visible for only a few hours. The second motivation was the prospect of finding kilonovae, the optical transient caused by two merging neutron stars. Merging neutron stars emit gravitational waves, which can be detected by gravitational wave observatories (aLIGO & Virgo). However, when aLIGO & Virgo detect the gravitational waves emitted by a binary neutron star merger, they can only give a rough indication were this merger occurred in the sky. Therefore, if we want to find the kilonova, a large area needs to be searched to find it. Such a large area contains many other transients besides the kilonovae. The second goal of the Sky2Night project is to determine what these other transients are and how to recognise them.
-							</p>
+								<li>
+									<a href="#Sky2Night">Sky2Night; a search for fast transients</a>
+								</li>
 
 
+						</article>
 
-                            <b>EL CVn binaries </b><br> EL CVn binaries are eclipsing pre-white dwarfs and A-main sequence stars. The light curve of these systems shows shallow eclipses, 10% or less, and the targets are relatively blue. This type of binary was first discovered by the Kepler satellite. Indications are that these systems are quite common, and SWASP found 17 of these systems (V<13). I used PTF light curve statistics and Pan-STARRS colours to find new systems. I trained a machine learning classifier to find more of these systems. In total, 36 new EL CVn binaries were found in the PTF light curve database. The figure shows a 3D view of the colour parameter space and the location of the EL CVn systems. I have also applied ML methods to find more eclipsing WD-RD systems in the PTF database. These are shown as yellow in the 3D figure. Work is ongoing to use the successor of PTF, the Zwicky Transient Facility to classify all eclipsing binaries in the northern sky.
-							</p>
 
+						<!-- The other research cards start here -->
+						<article id="ELCVn">
+							<h2 class="major">EL CVn binaries</h2>
 							<span class="image main">
 								<img src="images/ELCVn.png" alt=""/>
 							</span>
+							<p>
+								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
+									the next line.
+								-->
+								<b>EL CVn binaries </b><br> EL CVn binaries are eclipsing pre-white dwarfs and A-main sequence stars. The light curve of these systems shows shallow eclipses, 10% or less, and the targets are relatively blue. This type of binary was first discovered by the Kepler satellite. Indications are that these systems are quite common, and SWASP found 17 of these systems (V\<13). I used PTF light curve statistics and Pan-STARRS colours to find new systems. I trained a machine learning classifier to find more of these systems. In total, 36 new EL CVn binaries were found in the PTF light curve database. The figure shows a 3D view of the colour parameter space and the location of the EL CVn systems. I have also applied ML methods to find more eclipsing WD-RD systems in the PTF database. These are shown as yellow in the 3D figure. Work is ongoing to use the successor of PTF, the Zwicky Transient Facility to classify all eclipsing binaries in the northern sky. This work was published in MNRAS <a href=https://ui.adsabs.harvard.edu/abs/2018MNRAS.475.2560V/abstract>here</a>. 
+							</p>
 
 						</article>
+						<article id="Sky2Night">
+							<h2 class="major">Sky2Night</h2>
+							<span class="image main">
+								<img src="images/pic02.jpg" alt=""/>
+							</span>
+							<p>
+								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
+									the next line.
+								-->
+								<b>Sky2Night, a search for fast PTF transients </b><br> For my PhD research I worked on the Sky2Night project with the Palomar Transient Factory. The motivation for the Sky2Night project was twofold. The first is exploration: with automated survey telescopes, many new types of transients have been discovered. These new transients were typically visible for a few weeks. One goal of the Sky2Night projects was to determine if there are also unknown types of transients which are visible for only a few hours. The second motivation was the prospect of finding kilonovae, the optical transient caused by two merging neutron stars. Merging neutron stars emit gravitational waves, which can be detected by gravitational wave observatories (aLIGO & Virgo). However, when aLIGO & Virgo detect the gravitational waves emitted by a binary neutron star merger, they can only give a rough indication were this merger occurred in the sky. Therefore, if we want to find the kilonova, a large area needs to be searched to find it. Such a large area contains many other transients besides the kilonovae. The second goal of the Sky2Night project is to determine what these other transients are and how to recognise them.
+							</p>
+
+						</article>
+						<article id="AMCVn">
+							<h2 class="major">AMCVn</h2>
+							<span class="image main">
+                            <img src="images/amcvn.jpg" title="credit:caltech" alt=""/>
+							</span>
+							<p>
+								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
+									the next line.
+								-->
+								<b>AM CVn stars</b><br> AM CVn-type systems are ultra-compact, hydrogen-deficient accreting binaries with degenerate or semi-
+degenerate donors. The biggest open question regarding AM CVn binaries is the formation channel: the white dwarf channel, Helium star channel, or the evolved CV channel.
+							</p>
+
+								<b>Eclipsing AM CVn stars</b><br> By searching ZTF data, I discovered 5 new eclipsing AM CVn systems, increasing the known sample to 8 total. With high cadence followup lightcurves, I've measured the donor mass and radius. This shows that the donors are typically twice as large compared to a zero-temperature donor at the same orbital period. 
+							</p>
+
+								<b>Outbursting AM CVn stars</b><br> Similar to hydrogen-rich Cataclysmic variables, AM CVn systems with periods longer than 22 minutes show disk instability outbursts. Outbursts of AM CVn systems and hydrogen-rich CV appear very similar in the ZTF data. However, the counterparts are typically blue-er. We therefore obtained the Gaia and Pan-STARRS colours of all outbursting ZTF sources and show that most AM CVn systems are indeed blue. We obtained followup spectra of 35 blue, outbursting sources in ZTF and discovery 9 new AM CVn systems.
+							</p>
+
+						</article>
+						<article id="ZTFvariable">
+							<h2 class="major">ZTFvariable</h2>
+							<span class="image main">
+                            <img src="images/amcvn.jpg" title="credit:caltech" alt=""/>
+							</span>
+							<p>
+								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
+									the next line.
+								-->
+
+								<b>ZTF variable star classification</b><br>Periodic variability is one of the most important tools used to study stellar physics. In addition, objects in a close orbit (exoplanets or other stars) can periodically block some of the light of the star. Finding exoplanets is important in order to answer investigate how common life is in our Galaxy. A binary star can significantly change the evolution of both stars and can result in many exotic explosions, the key science project for ZTF. Currently, I am working on a data analysis pipeline to categorise all variable stars ZTF observed. This involves the use of traditional methods (period-finding using GPUs), and also involve novel methods like machine learning classification.
+							</p>
+						</article>
+						<article id="WDdarkcompanions">
+							<h2 class="major">White dwarfs & dark companions</h2>
+							<span class="image main">
+                            <img src="images/oowd_1856.jpg" title="" alt=""/>
+							</span>
+							<p>
+								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
+									the next line.
+								-->
+							<span class="image main">
+                            <img src="images/ZTFJ0038.gif" title="Chimera images of ZTFJ0038+2030" alt=""/>
+							</span>
+							</p>
+						</article>
+
 
 						<!-- Here is the "Community" card. -->
 						<article id="community">
