@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jan van Roestel</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Jan van Roestel</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="talks.html">Talks</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <div class="container">
+                <h1>Contact</h1>
+                <p>Get in touch</p>
+            </div>
+        </header>
+
+        <section>
+            <div class="container">
+                <div class="contact-info">
+                    <div>
+                        <div class="contact-item">
+                            <h4><i class="fas fa-envelope"></i> Email</h4>
+                            <p><a href="mailto:j.c.j.vanroestel.astro@gmail.com">j.c.j.vanroestel.astro@gmail.com</a></p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4><i class="fas fa-building"></i> Address</h4>
+                            <p>Am Campus 1<br>
+                            3400 Klosterneuburg<br>
+                            Austria</p>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://twitter.com/janvanroestel" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/janvanroestel/" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="contact-item">
+                            <h4><i class="fas fa-university"></i> Institution</h4>
+                            <p><strong>Institute of Science and Technology Austria (ISTA)</strong></p>
+                            <p style="margin-top: 1rem; color: var(--text-secondary);">Also: Guest Researcher at University of Amsterdam</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4><i class="fas fa-book"></i> Publications</h4>
+                            <p>
+                                <a href="https://ui.adsabs.harvard.edu/search/q=author%3A(%22%5Evan%20roestel%2C%20J%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0">First author publications</a><br>
+                                <a href="http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?db_key=AST&db_key=PRE&qform=AST&arxiv_sel=astro-ph&arxiv_sel=cond-mat&arxiv_sel=cs&arxiv_sel=gr-qc&arxiv_sel=hep-ex&arxiv_sel=hep-lat&arxiv_sel=hep-ph&arxiv_sel=hep-th&arxiv_sel=math&arxiv_sel=math-ph&arxiv_sel=nlin&arxiv_sel=nucl-ex&arxiv_sel=nucl-th&arxiv_sel=physics&arxiv_sel=quant-ph&arxiv_sel=q-bio&sim_query=YES&ned_query=YES&adsobj_query=YES&aut_logic=OR&obj_logic=OR&author=roestel%2C+J%0D%0Avan+roestel%2C+J&object=&start_mon=&start_year=&end_mon=&end_year=&ttl_logic=OR&title=&txt_logic=OR&text=&nr_to_return=200&start_nr=1&jou_pick=ALL&ref_stems=&data_and=ALL&group_and=ALL&start_entry_day=&start_entry_mon=&start_entry_year=&end_entry_day=&end_entry_mon=&end_entry_year=&min_score=&sort=SCORE&data_type=SHORT&aut_syn=YES&ttl_syn=YES&txt_syn=YES&aut_wt=1.0&obj_wt=1.0&ttl_wt=0.3&txt_wt=3.0&aut_wgt=YES&obj_wgt=YES&ttl_wgt=YES&txt_wgt=YES&ttl_sco=YES&txt_sco=YES&version=1">All publications (98 refereed)</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Jan van Roestel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

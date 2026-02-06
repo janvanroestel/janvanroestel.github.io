@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Jan van Roestel</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Jan van Roestel</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html" class="active">Research</a></li>
+                <li><a href="talks.html">Talks</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <div class="container">
+                <h1>Research</h1>
+                <p>White dwarf binaries, LISA sources, and time-domain astronomy</p>
+            </div>
+        </header>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <p>I am an observational astronomer focusing on white dwarf binary stars, specifically systems that emit gravitational waves detectable by the LISA gravitational wave satellite. I am an expert in time-domain astronomy and the use of optical time-domain survey telescopes, including the Zwicky Transient Facility and Rubin/LSST.</p>
+                    <p>I have published 11 first author papers and two as senior author with my students. A full list of my 98 refereed publications can be found on <a href="https://ui.adsabs.harvard.edu/search/q=author%3A(%22%5Evan%20roestel%2C%20J%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0">ADS</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title">Ultracompact White Dwarf Binaries</h2>
+
+                <div class="research-topic" id="AMCVn">
+                    <div class="research-topic-header">
+                        <div>
+                            <h3>Ultracompact Binaries & LISA Sources</h3>
+                            <p>Ultra-compact binaries consist of at least one white dwarf and have orbital periods of 5-65 minutes. Their orbital period evolution is governed by angular momentum loss due to gravitational wave radiation and they are the most common type of detectable LISA binary.</p>
+                            <p>There are detached systems (double white dwarfs) and mass-transferring systems (AM CVn binaries). The questions we aim to answer are: how are these systems formed; how do gravitational waves guide their evolution; and how does accretion change this?</p>
+                            <p>Using ZTF, and now also BlackGEM, I have been systematically searching for eclipsing systems. Because they are eclipsing, the binary properties can be precisely measured, which can be used to infer the formation channel.</p>
+                            <p><strong>Key publications:</strong> van Roestel et al. (2021a, 2022); Khalil et al. (2024); van Roestel et al. (2025)</p>
+                        </div>
+                        <div>
+                            <img src="images/amcvn.jpg" alt="AM CVn binary system">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-topic" id="WDdarkcompanions">
+                    <div class="research-topic-header">
+                        <div>
+                            <h3>White Dwarfs with Dark Companions</h3>
+                            <p>Short period white dwarf binaries are born from close main-sequence binaries that go through a common-envelope phase. Since white dwarfs are typically many times smaller but a lot hotter than their companions, although these systems are typically faint, eclipses are deep and easy to identify with photometric surveys.</p>
+                            <p>With ZTF, I have collected a sample of over 1400 such systems. Most are regular white dwarf-dM systems, but there are interesting subsets: 1) the 'hidden' population of period-bounce cataclysmic variables, 2) eclipsing magnetic white dwarf binaries, and 3) long period white dwarfs with brown dwarf/giant planet companions.</p>
+                            <p><strong>Key publication:</strong> van Roestel et al. (2021b), Full sample paper in prep.</p>
+                        </div>
+                        <div>
+                            <img src="images/oowd_1856.jpg" alt="White dwarf with dark companion">
+                            <img src="images/ZTFJ0038+20.gif" alt="ZTFJ0038+2030 eclipse animation" style="margin-top: 1rem;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-topic" id="CVs">
+                    <div class="research-topic-header">
+                        <div>
+                            <h3>Cataclysmic Variables</h3>
+                            <p>Cataclysmic variables are Roche lobe accreting white dwarfs with low-mass companions. The evolution of these objects is governed by gravitational waves, and they can be used as laboratories to understand accretion physics.</p>
+                            <p>The Zwicky Transient Facility is observing thousands of CVs which stand out due to their often strong variability. To understand the population better, I have made a catalogue of all outbursting cataclysmic variables detected in ZTF (5000+). In addition, by searching the ZTF data, I more than doubled the number of highly magnetic, dormant cataclysmic variables.</p>
+                            <p><strong>Key publication:</strong> van Roestel et al. (2024), Dwarf novae sample paper in prep.</p>
+                        </div>
+                        <div>
+                            <img src="images/WDRD.jpeg" alt="Cataclysmic variable">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">Survey Science & Classification</h2>
+
+                <div class="research-topic" id="ZTFvariable">
+                    <div class="research-topic-header">
+                        <div>
+                            <h3>ZTF Source Classification Project (SCoPe)</h3>
+                            <p>The Zwicky Transient Facility is producing vast amounts of data and has collected lightcurves for 2 billion objects. The first step in doing science with this data is to identify and classify the many different types of variables.</p>
+                            <p>With PTF, I explored the potential of machine learning classifiers for variable star lightcurves. With ZTF, I led the effort to identify and classify all persistent objects. This is a huge multi-class, multi-level classification problem with different requirements on purity and completeness.</p>
+                            <p>We developed an alternative approach: instead of using one machine learning classifier, we use multiple separate classifiers which classify binaries at different levels completely independently. This allows for much greater flexibility and insight.</p>
+                            <p><strong>Key publications:</strong> van Roestel et al. (2021c); Coughlin et al. (2021). See the <a href="https://scope.ztf.dev/">SCoPe project webpage</a>.</p>
+                        </div>
+                        <div>
+                            <img src="images/amcvn.jpg" alt="ZTF variable star classification">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-topic" id="quadruples">
+                    <div class="research-topic-header">
+                        <div>
+                            <h3>Eclipsing Quadruple Stars</h3>
+                            <p>Most stars can be found in multistar systems and are gravitationally bound to other stars. Quadruple stars are systems that consist of four stars, and the stars in these systems can heavily affect the evolution of some or all components.</p>
+                            <p>Working with BSc student T. Vaessen, we developed a method for finding double eclipsing binary quadruples that consist of two eclipsing binaries orbiting each other. We applied the method to ZTF lightcurves and increased the known sample size by more than 50%.</p>
+                            <p><strong>Key publication:</strong> Vaessen and van Roestel (2024)</p>
+                        </div>
+                        <div>
+                            <img src="images/ELCVn.png" alt="Eclipsing binary systems">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-topic" id="Sky2Night">
+                    <div class="research-topic-header">
+                        <div>
+                            <h3>Sky2Night: Fast Transient Search</h3>
+                            <p>The Sky2Night projects were three-week-long campaigns where we used the PTF telescope to systematically observe 400 deg² at a 2-hour cadence. Simultaneously, we used the WHT, INT, P60, and Hale telescopes to observe all new transients discovered in this field, obtaining an unbiased sample of transients.</p>
+                            <p>With the data, I determined a robust observed rate for extra-Galactic and Galactic transients. In addition, we calculated an upper-limit to the rate of fast optical transients. This work is in preparation for the systematic search for kilonovae (the optical counterparts to NS-NS mergers detected by LIGO/Virgo).</p>
+                            <p><strong>Key publication:</strong> van Roestel et al. (2019a)</p>
+                        </div>
+                        <div>
+                            <img src="images/pic02.jpg" alt="Sky2Night project">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Jan van Roestel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

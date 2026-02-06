@@ -1,490 +1,124 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<!-- 	This is the "Head" of the HTML document.
-		It contains information that isn't displayed on the actual page, but is useful
-		for the web browser when loading the page	
-	-->
-	<head>
-		<!-- This is the title of the page. It is the text that appears inside this pages tab in your web browser -->
-		<title>Jan van Roestel</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!-- 	This links to this page's CSS, which is contained in the folder assets/css and the file main.css.
-			 If you want to edit the styling of this page, you should edit the file assets/css/main.css
-			 If you have a new CSS file you'd like to add with custom styling, you should link to it here using:
-			 <link rel="stylesheet" href="assets/css/my-new-css-file.css"/> 
-		-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!-- 	In the case that the user's browser does not support JavaScript (unlikely, but possible), the page
-			will load a separate set of CSS stylings from the file assets/css/noscript.css
-			Any HTML contained inside <noscript></noscript> tags will be loaded in the event that JavaScript is not
-			available. 
-		-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <script src="jquery.js"></script> 
-        <script> 
-        $(function(){
-          $("#includedContent").load("b.html"); 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan van Roestel - Astronomer</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Jan van Roestel</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="talks.html">Talks</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Jan van Roestel</h1>
+                        <p class="hero-subtitle">Postdoc at <a href="https://ista.ac.at">ISTA</a> & <a href="http://blackgem.org/">BlackGEM</a> Project Scientist</p>
+                        <p class="hero-institution">Institute of Science and Technology Austria</p>
+                        <p class="hero-interests">
+                            <strong>Research Interests:</strong> Time-domain astronomy, white dwarf binaries, LISA gravitational wave sources, data mining & machine learning
+                        </p>
+                        <div class="hero-links">
+                            <a href="data/CV.pdf" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-file-pdf"></i> Curriculum Vitae
+                            </a>
+                            <a href="https://ui.adsabs.harvard.edu/search/q=author%3A(%22%5Evan%20roestel%2C%20J%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0" class="btn btn-outline">
+                                <i class="fas fa-book"></i> Publications
+                            </a>
+                        </div>
+                    </div>
+                    <img src="images/banner.jpg" alt="Jan van Roestel" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <p>I am an observational astronomer and focus on white dwarf binary stars, specifically systems that emit gravitational waves that will be detectable by the LISA gravitational wave satellite. I am an expert in time-domain astronomy and the use of optical time-domain survey telescopes, including the Zwicky Transient Facility and Rubin/LSST. I am also the project scientist for the <a href="http://blackgem.org/">BlackGEM</a> telescope project which is aimed at finding the optical signals of neutron-star mergers and studying the variable night sky.</p>
+
+                    <p><strong>Current:</strong> Since September 2025, I am a postdoc at the Institute of Science and Technology Austria (ISTA), where I use various large surveys to study variable white dwarfs such as binary white dwarfs that are gravitational wave sources, planets around white dwarf stars, and massive, rapidly rotating white dwarfs that are the merger products of two white dwarfs.</p>
+
+                    <p><strong>Previous:</strong> From 2022 to 2025, I was a VENI-postdoc fellow at the University of Amsterdam working on "The life and death of white dwarf binary stars". From 2018 to 2022, I was a postdoc at Caltech where I worked on the Zwicky Transient Facility (ZTF) project as the Galactic science working group (co-)lead.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="container">
+                <h2 class="section-title">News</h2>
+                <ul class="news-list">
+                    <li class="news-item">
+                        <span class="news-date">March 2026</span>
+                        <div class="news-content">
+                            <h4>Hotwiring2026 Conference</h4>
+                            <p>Invited talk on "Alerts for stellar astronomy" at Caltech</p>
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">January 2026</span>
+                        <div class="news-content">
+                            <h4>VLT-in-2030s Conference</h4>
+                            <p>Discussion panel member on "Time domain astronomy" at ESO</p>
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">September 2025</span>
+                        <div class="news-content">
+                            <h4>New Position at ISTA</h4>
+                            <p>Started as postdoc at the Institute of Science and Technology Austria</p>
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">June 2025</span>
+                        <div class="news-content">
+                            <h4>Dutch Astronomy Conference</h4>
+                            <p>Talk on "Planetesimal transits around white dwarfs"</p>
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">May 2025</span>
+                        <div class="news-content">
+                            <h4>New Paper</h4>
+                            <p>Published "Eclipsing white dwarfs from ZTF: II. Seven eclipsing double white dwarfs"</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Jan van Roestel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
         });
-        </script> 
-	</head>
-	<!-- The body is the location where your site's content will go -->
-	<body class="is-preload">
-
-			<!-- This "div" wraps around all of our content and just changes how things are layed out -->
-			<div id="wrapper">
-
-					<!-- This is where the content that appears on page load exists -->
-					<header id="header">
-						<!-- This is the main content of the front page -->
-						<div class="content">
-							<div class="inner">
-								<!-- Here is a heading where you can put your name -->
-								<h1>
-									Jan van Roestel
-								</h1>
-								<!-- 	Here is an image where you can put a picture of you. 
-									You can change the width and height attributes below to change how large
-									your image is.
-
-									Try adding "border-radius: 50%;" to the style attribute.
-								-->
-								<img src="images/banner.jpg" style="width:100%;  object-fit: cover;">
-								<!-- 	Here is a paragraph where you can put your position and institution, or
-									a short line about yourself.
-								-->
-								<p> VENI-Postdoctoral fellow & <a href=http://blackgem.org/ >BlackGEM</a> project scientist
-								</p>
-                                <p> University of Amsterdam
-								</p>
-                                
-                                
-                                <p>
-								<b>Research Interests:</b> Time-domain astronomy, white dwarf binaries, data mining & machine learning
-							    </p>
-								<!-- Here is a paragraph where you can put a link to your CV -->
-								<p>
-									<!-- Note you will want to change where this points to! -->
-									<b><a href="data/CV.pdf" target="_blank">Curriculum Vitae</a></b>
-								</p>
-                                
-                                <p><b>
-                                <a href="https://ui.adsabs.harvard.edu/search/q=author%3A(%22%5Evan%20roestel%2C%20J%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0">First author</a></b> and 							<b><a href="http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?db_key=AST&db_key=PRE&qform=AST&arxiv_sel=astro-ph&arxiv_sel=cond-mat&arxiv_sel=cs&arxiv_sel=gr-qc&arxiv_sel=hep-ex&arxiv_sel=hep-lat&arxiv_sel=hep-ph&arxiv_sel=hep-th&arxiv_sel=math&arxiv_sel=math-ph&arxiv_sel=nlin&arxiv_sel=nucl-ex&arxiv_sel=nucl-th&arxiv_sel=physics&arxiv_sel=quant-ph&arxiv_sel=q-bio&sim_query=YES&ned_query=YES&adsobj_query=YES&aut_logic=OR&obj_logic=OR&author=roestel%2C+J%0D%0Avan+roestel%2C+J&object=&start_mon=&start_year=&end_mon=&end_year=&ttl_logic=OR&title=&txt_logic=OR&text=&nr_to_return=200&start_nr=1&jou_pick=ALL&ref_stems=&data_and=ALL&group_and=ALL&start_entry_day=&start_entry_mon=&start_entry_year=&end_entry_day=&end_entry_mon=&end_entry_year=&min_score=&sort=SCORE&data_type=SHORT&aut_syn=YES&ttl_syn=YES&txt_syn=YES&aut_wt=1.0&obj_wt=1.0&ttl_wt=0.3&txt_wt=3.0&aut_wgt=YES&obj_wgt=YES&ttl_wgt=YES&txt_wgt=YES&ttl_sco=YES&txt_sco=YES&version=1">all</a> publications </b>
-						</p>
-                                
-							</div>
-						</div>
-						<!-- This is the navigation menu -->
-						<nav>
-							<!-- This element makes an "Unordered List" -->
-							<ul>
-								<!-- This is a "List Item" -->
-								<li>
-									<!-- 	Note that this links to #about, which will move the page to wherever
-										the element with the id "about" exists.
-									-->
-									<a href="#about">About Me</a>
-								</li>
-								<li>
-									<a href="#research">Research</a>
-								</li>
-								<li>
-									<a href="#talks">Talks</a>
-								</li>
-								<li>
-									<a href="#community">Community</a>
-								</li>
-								<li>
-									<a href="#contact">Contact</a>
-								</li>
-								<!-- 	You can add another button to your navigation menu by adding
-									another List Item with a link inside of it.
-								-->
-								<!-- <li>
-									<a href="images/Astronomy.jpg">My CV</a>
-								</li> -->
-							</ul>
-						</nav>
-					</header>
-
-					<!-- These are the "cards" that appear when you click the buttons on the main page -->
-					<div id="main">
-						<!-- 	Here is the "About Me" card. Note it has the id "about", which the previous 
-							button links to.
-						-->
-						<article id="about">
-							<h2 class="major">About Me</h2>
-							<!-- Here is an image that you can customize for this page -->
-							<span class="image main">
-								<img src="images/banner.jpg" alt=""/>
-							</span>
-							<!-- Here are three paragraphs where you can fill out information about yourself -->
-								<!-- Items contained in <b> tags are bolded! -->
-							<p>
-								<b>Current</b> I am currently a VENI-postdoc fellow at the university of Amsterdam. My project is to study the 'life and death of white dwarf binary stars' (<a href="https://www.nwo.nl/en/projects/viveni212201"> NWO website</a>). 
-I use large optical survey telescopes (ZTF, BlackGEM, and others) to find and characterize individual white dwarfs, but also double white dwarfs as a population. For BlackGEM, I became project scientist on June 2023, taking over from Peter Jonker.
-                            </p>
-
-							<p>
-								<b>Previous</b> From 2018 to 2022, I was a postdoc at Caltech were I worked on the Zwicky Transient Facility (ZTF) project. Among other things, I was the ZTF-Galactic science working group (co-)lead.
-							</p>
-
-								<b>Education:</b>
-                                <h5>PhD Astrophysics </h5>
-                                <p> As a graduate student at Radboud University, I used the Palomar Transient Factory (PTF) to study the optical variable sky <a href="./Documents/Thesis_JvanRoestel.pdf"> I used the Palomar Transient Factory (PTF) to study the optical variable sky </a> (also <a href="http://hdl.handle.net/2066/197982">here</a>). The first half focusses on fast optical transients. The second half is about eclipsing white dwarf binary systems in the PTF data.
-                                </p>  
-
-                                <h5> MSc Astrophysics </h5>
-                                <p> I obtained my Master degree from Radboud University Nijmegen (NL). I also attended courses at the University of Amsterdam and Leuven University (BE). The subject of my <a href="./data/main.pdf"> Master Thesis</a> is PTF1108ag, a new eclipsing white dwarf - red dwarf binary star.
-
-                                </p>  
-
-                                <h5> BSc Physics </h5>
-                                <p> I obtained a Bachelor degree in physics and astronomy from Radboud University Nijmegen (NL), I did a 3 month  <a href="./data/bachelor_thesis.pdf"> project</a>. under supervision of Gijs Nelemans, analysing spectra of pulsating SdO star SDSS J160043.6+074802.9 (<a href="http://arxiv.org/abs/astro-ph/0607171"> Woudt et al. 2006</a>). 
-							</p>
-
-						</article>
-
-						<!-- Here is the "Research" card. -->
-						<article id="research">
-							<h2 class="major">Research</h2>
-							<span class="image main">
-								<img src="images/banner.jpg" alt=""/>
-							</span>
-								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
-									the next line.
-								-->
-                                <p>My research involves two themes; the first are close white dwarf binary stars. In general, I am intrested in how close binary systems are formed, how their properties differ from isolated white dwarf, how mass-accretion in these systems manifests itself, and how these systems relate to astrophyscical transients, for example SNIa supernovae. There are many types of white dwarf binaries. Here are a few different types I have worked on:  
-<ul>
-								<li>
-									<a href="#WDdarkcompanions">White dwarfs with dark companions</a>
-								</li>
-
-								<li>
-									<a href="#AMCVn">AM CVn binary stars</a>
-								</li>
-
-								<li>
-									<a href="#WDRD">WD-RD</a>
-								</li>
-
-								<li>
-									<a href="#ELCVn">EL CVn binary stars</a>
-								</li>
-
-                            </ul>
-</p>
-
-<p>The second major topic is focussed on exploiting optical surveys to systematically study poputlation of different objects. Some of my graduate work focussed on finding fast transients with PTF. Currently, I am working on the classification of variable stars with ZTF.
-<ul>
-								<li> 
-									<a href="#ZTFvariable">ZTF variable star classification</a>
-								</li>
-								<li>
-									<a href="#Sky2Night">Sky2Night; a search for fast transients</a>
-								</li>
-</ul>
-</p>
-
-						</article>
-
-
-						<!-- The other research cards start here -->
-						<article id="ELCVn">
-							<h2 class="major">EL CVn binaries</h2>
-							<span class="image main">
-								<img src="images/ELCVn.png" alt=""/>
-							</span>
-							<p>
-								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
-									the next line.
-								-->
-								<b>Outbursting AM CVn stars</b><br> Similar to hydrogen-rich Cataclysmic variables, AM CVn systems with periods longer than 22 minutes show disk instability outbursts. Outbursts of AM CVn systems and hydrogen-rich CV appear very similar in the ZTF data. However, the counterparts are typically blue-er. We, therefore, obtained the Gaia and Pan-STARRS colours of all outbursting ZTF sources and show that most AM CVn systems are indeed blue. We obtained followup spectra of 35 blue, outbursting sources in ZTF and discovered 9 new AM CVn systems.							</p>
-
-						</article>
-
-
-						<article id="WDRD">
-							<h2 class="major">WD-RD binaries</h2>
-							<span class="image main">
-								<img src="images/WDRD.jpeg" alt=""/>
-							</span>
-							<p>
-								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
-									the next line.
-								-->
-								<b> White dwarf - red dwarf binaries</b><br> are the most common type of post-common envelope binary. My research focusses on finding and characterizing eclipsing systems, see for example my MSc. thesis work. I am currently using ZTF to find more of these systems and found almost a 1000 of them.
-							</p>
-						</article>
-
-
-
-						<article id="ZTFvariable">
-							<h2 class="major">ZTFvariable</h2>
-							<span class="image main">
-                            <img src="images/amcvn.jpg" title="credit:caltech" alt=""/>
-							</span>
-							<p>
-								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
-									the next line.
-								-->
-
-								<b>ZTF variable star classification</b><br>Periodic variability is one of the most important tools used to study stellar physics. In addition, objects in a close orbit (exoplanets or other stars) can periodically block some of the light of the star. To study different classes of stars and to identify unusual objects, variable stars need to be classified. 
- Currently, I am working with a team at Caltech to build an analysis pipeline to categorise all ZTF variable stars. This requires a concise definition of the different types of variable stars, the use of traditional methods like period-finding algorithms, and also involves novel methods like machine learning classification. See this <a href="https://scope.ztf.dev/">webpage</a> for more information.
-							</p>
-						</article>
-
-
-
-						<article id="Sky2Night">
-							<h2 class="major">Sky2Night</h2>
-							<span class="image main">
-								<img src="images/pic02.jpg" alt=""/>
-							</span>
-							<p>
-								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
-									the next line.
-								-->
-								<b>Sky2Night, a search for fast PTF transients </b><br> For my PhD research I worked on the Sky2Night project with the Palomar Transient Factory. The motivation for the Sky2Night project was twofold. The first is exploration: with automated survey telescopes, many new types of transients have been discovered. These new transients were typically visible for a few weeks. One goal of the Sky2Night projects was to determine if there are also unknown types of transients which are visible for only a few hours. The second motivation was the prospect of finding kilonovae, the optical transient caused by two merging neutron stars. Merging neutron stars emit gravitational waves, which can be detected by gravitational wave observatories (aLIGO & Virgo). However, when aLIGO & Virgo detect the gravitational waves emitted by a binary neutron star merger, they can only give a rough indication were this merger occurred in the sky. Therefore, if we want to find the kilonova, a large area needs to be searched to find it. Such a large area contains many other transients besides the kilonovae. The second goal of the Sky2Night project is to determine what these other transients are and how to recognise them.
-							</p>
-						</article>
-
-
-
-
-
-						</article>
-						<article id="AMCVn">
-							<h2 class="major">AMCVn</h2>
-							<span class="image main">
-                            <img src="images/amcvn.jpg" title="credit:caltech" alt=""/>
-							</span>
-							<p>
-								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
-									the next line.
-								-->
-								<b>AM CVn stars</b><br> AM CVn-type systems are ultra-compact, hydrogen-deficient accreting binaries with degenerate or semi-
-degenerate donors. The biggest open question regarding AM CVn binaries is the formation channel: the white dwarf channel, Helium star channel, or the evolved CV channel.
-							</p>
-
-								<b>Eclipsing AM CVn stars</b><br> By searching ZTF data, I discovered 5 new eclipsing AM CVn systems, increasing the known sample to 8 total. With high cadence followup lightcurves, I've measured the donor mass and radius. This shows that the donors are typically twice as large compared to a zero-temperature donor at the same orbital period. 
-							</p>
-
-								<b>Outbursting AM CVn stars</b><br> Similar to hydrogen-rich Cataclysmic variables, AM CVn systems with periods longer than 22 minutes show disk instability outbursts. Outbursts of AM CVn systems and hydrogen-rich CV appear very similar in the ZTF data. However, the counterparts are typically blue-er. We therefore obtained the Gaia and Pan-STARRS colours of all outbursting ZTF sources and show that most AM CVn systems are indeed blue. We obtained followup spectra of 35 blue, outbursting sources in ZTF and discovery 9 new AM CVn systems.
-							</p>
-
-						</article>
-
-						</article>
-						<article id="CVs">
-							<h2 class="major">AMCVn</h2>
-							<span class="image main">
-                            <img src="images/amcvn.jpg" title="credit:caltech" alt=""/>
-							</span>
-							<p>
-								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
-									the next line.
-								-->
-								<b>Cataclysmic variable star</b><br> CVs are white dwarf stars that are accreting from a donor star via Roche lobe overflow. 
-
-
-
-							</p>
-
-
-
-						</article>
-
-
-
-
-						<article id="WDdarkcompanions">
-							<h2 class="major">WDs & dark companions</h2>
-							<span class="image main">
-                            <img src="images/oowd_1856.jpg" title="" alt=""/>
-							</span>
-							<p>
-								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
-									the next line.
-								-->
-
-                            The Kepler and TESS satellites have found many substeller objects around main-sequence stars. It is uncertain what happens to these substellar companions as the main-sequence star becomes a red-giant and finally ends up as a white dwarf. 
-
-We have been searching for dark, substellar companions around white dwarfs using ZTF by looking for white dwarf that periodically disappear as they are eclipsed by their larger, dark companion.
-
-							<span class="image main">
-                            <img src="images/ZTFJ0038+20.gif" title="" alt=""/>
-							</span>
-
-                           The video above shows high speed photometry of ZTFJ0038+2030; a white dwarf that is eclipsed every 10 hours by a substellar companion. Followup observations show that the companion is a very compact, old brown dwarf. 
-							</p>
-						</article>
-
-
-						<!-- Here is the "Community" card. -->
-						<article id="community">
-							<h2 class="major">Community</h2>
-							<span class="image main">
-								<img src="images/banner.jpg" alt=""/>
-							</span>
-							<p>
-								<b>Teaching:</b> </br> As a PhD student, I was the student assistant (responsible for problem solving classes) for many physics and astronomy courses. In addition, I organised classes for the 'C' programming courses for a number of years while working on my PhD  </br> I've also supervised students who were doing a few month long science project. This includes two Bachelor students at Radboud University, and summer intern (SURF) students at Caltech.
-							</p>
-							<p>
-								<b>Outreach:</b> </br> I've given prospective students and the general public telescopes tours at the Radboud University. This involved demonstrating the use of the two optical telescopes
-at the Radboud University and explaining what we study with optical telescopes.
-							</p>
-
-						</article>
-
-
-						<!-- Here is the "Talks" card. -->
-						<article id="talks">
-							<h2 class="major">Talks</h2>
-							<span class="image main">
-								<img src="images/banner.jpg" alt=""/>
-							</span>
-
-                        <b>Recent science talks:</b><br>
-                        <ul>
-
-                        <li>
-                        July 2024: COSPAR, Busan, Korea
-                        </li>
-                        <li>
-                        July 2024: EuroWD24, Barcelona
-                        </li>
-                        <li>
-                        June 2024:   <a href="https://www.veranderlijkesterren.info/index.php/home">  Veranderlijke Sterrendag der Lage Landen 2024; (<a href="https://docs.google.com/presentation/d/18M9EWK-XRpxqcPtotq2AfEEcyOmRBAv-55jBZAEvlyY/edit?usp=sharing"> slides)
-                        </li>
-                        <li>
-                        June 2024:   <a href="https://www.astrouw.edu.pl/en/tuesday-seminars/"> Colloquim Warsaw; (<a href="https://www.youtube.com/live/thyTzamhJ10"> youtube)
-                        </li>        
-                        <li>
-                        June 2024:   <a href="https://www.sterrenwacht-gv.nl/activiteiten/lezingen/">  KNVWS Vecht en Gooistreek)
-                        </li>
-                        <li>
-                        March 2024: KU Leuven seminar (with Steven Bloemen)
-                        </li>
-                        <li>
-                        October 2023: NOVA instrumentation day
-                        </li>
-                        <li>
-                        September 2023: AMCVn5 conference (<a href="https://www.armagh.space/meetings-conferences/amcvn5#deeplink-0"> link), Armagh Observatory
-                        </li>
-                        <li>
-                        June 2023: Vasto Accretion Conference
-                        </li>
-
-                        <li>
-                        Febuari 2023: Colloquim, Armagh Observatory
-                        </li>
-                        
-                        <li>
-                        November 2022: KITP WD conference, Santa Barbara USA (<a href="https://www.youtube.com/watch?v=rMm6HnV2TYo&list=PLTz4HiOhksNvvzHY8rsDtNAzLt7UiwiH1&index=8"> youtube </a>)
-                        </li>
-                        <li>
-                        August 2022: <a href="./talks/EuroWD22_janvanroestel.pdf"> EuroWD22, Tuebingen DE</a>
-                        </li>
-                        <li>
-                        July 2022: NAM, Warwick UK,
-                        </li>
-                        <li>
-                        March 2022: colloquim at Radboud University, Nijmegen NL
-                        </li>
-                        <li>
-                        August 2021: ZTF Summerschool, online (<a href="https://www.youtube.com/watch?v=heeAqtuXo70"> youtube </a>)
-                        </li>
-                        </ul>
-
-						</article>
-
-						<!-- Here is a the "Contact" card. -->
-						<article id="contact">
-							<h2 class="major">Contact</h2>
-							<p> 
-								<a href="mailto:j.c.j.vanroestel@uva.nl"> <b>email:</b> j.c.j.vanroestel@uva.nl</a>
-							</p>
-							<p> 
-								<b>Visiting address:</b> Science Park 904, 1098 XH Amsterdam, Netherlands
-
-							</p>
-
-							<!-- 	Here are the fancy icons that link to your social media.
-								These icons are rendered using Font Awesome fonts, and you can find more icons
-								here: https://fontawesome.com/icons
-							-->
-							<ul class="icons">
-								<!-- The Twitter icon -->
-								<li>
-									<!-- 	Note that you need to change the link to point to your page.
-										Replace "#" with your Twitter profile page.
-									-->
-									<a href="https://twitter.com/janvanroestel" class="icon fa-twitter">
-										<span class="label">Twitter</span>
-									</a>
-								</li>
-								<!-- The Facebook icon 
-								<li>
-									<a href="#" class="icon fa-facebook">
-										<span class="label">Facebook</span>
-									</a>
-								</li>-->
-								<!-- The Instagram icon 
-								<li>
-									<a href="#" class="icon fa-instagram">
-										<span class="label">Instagram</span>
-									</a>
-								</li>-->
-								<!-- The GitHub icon -->
-								<li>
-									<a href="https://github.com/janvanroestel/" class="icon fa-github">
-										<span class="label">GitHub</span>
-									</a>
-								</li>
-								<!-- 	We can add a new icon by searching on the Font Awesome website
-									for the correct class name and inserting it as a new list item.
-
-									We found "envelope" here: https://fontawesome.com/icons/envelope
-								-->
-								<!-- <li>
-									<a href="#" class="icon fa-envelope">
-										<span class="label"></span>
-									</a>
-								</li> -->
-							</ul>
-						</article>
-					</div>
-
-					<!-- This is the footer that appears at the bottom of the page -->
-					<footer id="footer">
-						<!-- 	You can change "Untitled" to your name to show everyone that
-							this is your work.
-						-->
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
-
-			</div>
-
-			<!--	This is the background image of the site.
-				All configuration of the background is done with CSS.
-				Look in the file assets/css/main.css and search for "#bg" to
-				see how this element is styled. Look for comments pointing 
-				to where you can set a new background image.
-			-->
-			<div id="bg"></div>
-
-			<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    </script>
+</body>
 </html>
