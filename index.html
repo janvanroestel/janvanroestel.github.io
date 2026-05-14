@@ -6,26 +6,10 @@
     <title>Jan van Roestel - Astronomer</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="assets/js/include.js"></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Jan van Roestel</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="data-code.html">Data & Code</a></li>
-                <li><a href="talks.html">Talks</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<body data-page="home">
+    <script>writeNav()</script>
 
     <main>
         <section class="hero">
@@ -53,7 +37,7 @@
                             </a>
                         </div>
                     </div>
-                    <img src="images/janvanroestel.jpg" alt="Jan van Roestel" class="hero-image">
+                    <img src="images/janvanroestel.jpg" alt="Headshot of Jan van Roestel" class="hero-image" loading="eager" fetchpriority="high">
                 </div>
             </div>
         </section>
@@ -76,6 +60,20 @@
                 <h2 class="section-title">News</h2>
                 <ul class="news-list">
                     <li class="news-item">
+                        <span class="news-date">April 2026</span>
+                        <div class="news-content">
+                            <h4>White Dwarf Transiting Debris Alerts</h4>
+                            <p>Launched a real-time alert system for transiting debris events around white dwarfs, detected using survey data. These transits are signatures of planetary material orbiting close to white dwarfs. <a href="https://janvanroestel.github.io/WD-transitingdebris-alerts/">View the alerts</a>.</p>
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">April 2026</span>
+                        <div class="news-content">
+                            <h4>Eclipsing White Dwarf Explorer</h4>
+                            <p>Released an interactive explorer for the catalogue of eclipsing white dwarfs from ZTF (and being expanded with ATLAS and BlackGEM data). <a href="https://janvanroestel.github.io/eclipsingWD-explorer/">Explore the catalogue</a>.</p>
+                        </div>
+                    </li>
+                    <li class="news-item">
                         <span class="news-date">September 2025</span>
                         <div class="news-content">
                             <h4>New Position at ISTA</h4>
@@ -86,7 +84,7 @@
                         <span class="news-date">May 2025</span>
                         <div class="news-content">
                             <h4>New Paper</h4>
-                            <p>Published "Eclipsing white dwarfs from ZTF: II. Seven eclipsing double white dwarfs" (<a href="https://arxiv.org/abs/2505.15580">paper</a>). In a search for eclipsing white dwarf using ZTF, I found 7 eclipsing double white dwarfs. Previously, short period double white dwarfs were assumed to have circular orbits, but in this work I show that two of them are slightly eccentric. This is intresting from a formation perspective, but also because is (slightly) changes the gravitational wave signal that LISA will detect. </p>
+                            <p>Published "Eclipsing white dwarfs from ZTF: II. Seven eclipsing double white dwarfs" (<a href="https://arxiv.org/abs/2505.15580">paper</a>). In a search for eclipsing white dwarf using ZTF, I found 7 eclipsing double white dwarfs. Previously, short period double white dwarfs were assumed to have circular orbits, but in this work I show that two of them are slightly eccentric. This is interesting from a formation perspective, but also because it (slightly) changes the gravitational wave signal that LISA will detect. </p>
                         </div>
                     </li>
                 </ul>
@@ -94,17 +92,6 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; Jan van Roestel. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
+    <script>writeFooter()</script>
 </body>
 </html>
-

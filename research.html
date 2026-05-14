@@ -6,26 +6,10 @@
     <title>Research - Jan van Roestel</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="assets/js/include.js"></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Jan van Roestel</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html" class="active">Research</a></li>
-                <li><a href="data-code.html">Data & Code</a></li>
-                <li><a href="talks.html">Talks</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<body data-page="research">
+    <script>writeNav()</script>
 
     <main>
         <header class="page-header">
@@ -58,7 +42,7 @@
                             <p><strong>Key publications:</strong> van Roestel et al. (2021a, 2022); Khalil et al. (2024); van Roestel et al. (2025)</p>
                         </div>
                         <div>
-                            <img src="images/amcvn.jpg" alt="AM CVn binary system">
+                            <img src="images/amcvn.jpg" alt="Artist's impression of an AM CVn binary system" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -73,8 +57,8 @@
                             <p><a href="https://janvanroestel.github.io/eclipsingWD-explorer/" class="btn btn-outline">Explore the sample</a></p>
                         </div>
                         <div>
-                            <img src="images/oowd_1856.jpg" alt="White dwarf with dark companion">
-                            <img src="images/ZTFJ0038+20.gif" alt="ZTFJ0038+2030 eclipse animation" style="margin-top: 1rem;">
+                            <img src="images/oowd_1856.jpg" alt="White dwarf eclipsed by a dark companion" loading="lazy">
+                            <img src="images/ZTFJ0038+20.gif" alt="Lightcurve animation of eclipsing white dwarf ZTFJ0038+20" style="margin-top: 1rem;" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -87,7 +71,7 @@
                             <p><a href="https://janvanroestel.github.io/WD-transitingdebris-alerts/" class="btn btn-outline">Transiting Debris Alerts</a></p>
                         </div>
                         <div>
-                            <img src="images/G29-38_Debris_disk.jpg" alt="White dwarf with planetary debris disk">
+                            <img src="images/G29-38_Debris_disk.jpg" alt="Artist's impression of debris disk around white dwarf G29-38" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -101,7 +85,7 @@
                             <p><strong>Key publication:</strong> van Roestel et al. (2024), Dwarf novae sample paper in prep.</p>
                         </div>
                         <div>
-                            <img src="images/WDRD.jpeg" alt="Cataclysmic variable">
+                            <img src="images/WDRD.jpeg" alt="Cataclysmic variable: white dwarf accreting from red dwarf companion" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -122,7 +106,7 @@
                             <p><strong>Key publications:</strong> van Roestel et al. (2021c); Coughlin et al. (2021). See the <a href="https://scope.ztf.dev/">SCoPe project webpage</a>.</p>
                         </div>
                         <div>
-                            <img src="images/amcvn.jpg" alt="ZTF variable star classification">
+                            <img src="images/amcvn.jpg" alt="ZTF variable star classification illustration" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -136,7 +120,7 @@
                             <p><strong>Key publication:</strong> Vaessen and Van Roestel (2024)</p>
                         </div>
                         <div>
-                            <img src="images/ELCVn.png" alt="Eclipsing binary systems">
+                            <img src="images/ELCVn.png" alt="Eclipsing quadruple binary system schematic" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -150,7 +134,7 @@
                             <p><strong>Key publication:</strong> van Roestel et al. (2019a)</p>
                         </div>
                         <div>
-                            <img src="images/pic02.jpg" alt="Sky2Night project">
+                            <img src="images/pic02.jpg" alt="Sky2Night observation field" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -158,16 +142,6 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; Jan van Roestel. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
+    <script>writeFooter()</script>
 </body>
 </html>

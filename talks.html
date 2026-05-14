@@ -6,26 +6,10 @@
     <title>Talks - Jan van Roestel</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="assets/js/include.js"></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Jan van Roestel</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="data-code.html">Data & Code</a></li>
-                <li><a href="talks.html" class="active">Talks</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<body data-page="talks">
+    <script>writeNav()</script>
 
     <main>
         <header class="page-header">
@@ -196,16 +180,6 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; Jan van Roestel. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
+    <script>writeFooter()</script>
 </body>
 </html>

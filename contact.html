@@ -6,26 +6,10 @@
     <title>Contact - Jan van Roestel</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="assets/js/include.js"></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Jan van Roestel</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="data-code.html">Data & Code</a></li>
-                <li><a href="talks.html">Talks</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<body data-page="contact">
+    <script>writeNav()</script>
 
     <main>
         <header class="page-header">
@@ -52,16 +36,16 @@
                         </div>
 
                         <div class="social-links">
-                            <a href="https://scholar.google.com/citations?user=vMg1cvQAAAAJ" title="Google Scholar">
+                            <a href="https://scholar.google.com/citations?user=vMg1cvQAAAAJ" title="Google Scholar" aria-label="Google Scholar profile">
                                 <i class="fas fa-graduation-cap"></i>
                             </a>
-                            <a href="https://orcid.org/0000-0002-2626-2872" title="ORCID">
+                            <a href="https://orcid.org/0000-0002-2626-2872" title="ORCID" aria-label="ORCID profile">
                                 <i class="fab fa-orcid"></i>
                             </a>
-                            <a href="https://twitter.com/janvanroestel" title="Twitter">
-                                <i class="fab fa-twitter"></i>
+                            <a href="https://www.linkedin.com/in/jan-van-roestel-phd-53807089/" title="LinkedIn" aria-label="LinkedIn profile">
+                                <i class="fab fa-linkedin"></i>
                             </a>
-                            <a href="https://github.com/janvanroestel/" title="GitHub">
+                            <a href="https://github.com/janvanroestel/" title="GitHub" aria-label="GitHub profile">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -94,16 +78,6 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; Jan van Roestel. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
+    <script>writeFooter()</script>
 </body>
 </html>

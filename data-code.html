@@ -6,26 +6,10 @@
     <title>Data & Code - Jan van Roestel</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="assets/js/include.js"></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Jan van Roestel</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="data-code.html" class="active">Data & Code</a></li>
-                <li><a href="talks.html">Talks</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<body data-page="data">
+    <script>writeNav()</script>
 
     <main>
         <header class="page-header">
@@ -47,7 +31,7 @@
                             </a>
                         </div>
                         <div>
-                            <img src="images/amcvn.jpg" alt="AM CVn binary">
+                            <img src="images/amcvn.jpg" alt="AM CVn binary" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -62,11 +46,11 @@
                             </a>
                         </div>
                         <div>
-                            <img src="images/ZTFJ0038+20.gif" alt="Eclipsing white dwarf ZTFJ0038+20">
+                            <img src="images/ZTFJ0038+20.gif" alt="Lightcurve animation of eclipsing white dwarf ZTFJ0038+20" loading="lazy">
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="research-topic">
                     <div class="research-topic-header">
                         <div>
@@ -84,9 +68,12 @@
                         <div>
                             <h3>Dwarf novae outbursts</h3>
                             <p>Dwarf novae outbursts are abrupt brightenings (by 2–8 magnitudes) of cataclysmic variable stars. They are the result of a thermal-viscous instability in the accretion disk surrounding a white dwarf. The most common type are white dwarfs accreting from red dwarf stars, but they also occur in the much more rare AM CVn systems. In my search for AM CVn systems in ZTF <a href="https://ui.adsabs.harvard.edu/abs/2021AJ....162..113V/abstract">van Roestel et al. (2021)</a>, I found it useful to have a catalogue of all dwarf novae candidates (!). The list is not very clean and curated, but I'm happy to share it 'as-is'. </p>
+                            <a href="mailto:j.c.j.vanroestel.astro@gmail.com?subject=Dwarf%20novae%20catalogue%20request" class="btn btn-outline">
+                                <i class="fas fa-envelope"></i> Request the Catalogue
+                            </a>
                         </div>
                         <div>
-                            <img src="images/Cataclysmic_variable.svg.png" alt="Cataclysmic variable">
+                            <img src="images/Cataclysmic_variable.svg.png" alt="Cataclysmic variable" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -95,16 +82,6 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; Jan van Roestel. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
+    <script>writeFooter()</script>
 </body>
 </html>

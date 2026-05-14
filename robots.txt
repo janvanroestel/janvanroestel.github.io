@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://janvanroestel.github.io/sitemap.xml
