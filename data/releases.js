@@ -1210,5 +1210,113 @@ const RELEASES = [
   ],
   "url": "https://research.chalmers.se/publication/546859",
   "notes": "Paper in PASA 2025; exact public release date not found"
+ },
+ {
+  "survey": "DES",
+  "survey_id": "des",
+  "release": "DR1 (first three years of data)",
+  "start": "2018-01-10",
+  "end": null,
+  "kind": "exact",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric"
+  ],
+  "url": "https://noirlab.edu/science/news/announcements/sci17032",
+  "notes": "Public release 10 Jan 2018, announced in advance (NOIRLab); ~400 million objects"
+ },
+ {
+  "survey": "DES",
+  "survey_id": "des",
+  "release": "DR2 (6 years, grizY)",
+  "start": null,
+  "end": null,
+  "kind": "undated",
+  "status": "confirmed",
+  "evidence": "secondary",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric"
+  ],
+  "url": "https://arxiv.org/pdf/2101.05765",
+  "notes": "Paper published Jul 2021 (ApJS); exact public release date not found"
+ },
+ {
+  "survey": "DELVE",
+  "survey_id": "delve",
+  "release": "DELVE DR2 (DECam Local Volume Exploration)",
+  "start": null,
+  "end": null,
+  "kind": "undated",
+  "status": "confirmed",
+  "evidence": "secondary",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric"
+  ],
+  "url": "https://iac.es/en/science-and-technology/publications/decam-local-volume-exploration-survey-data-release-2",
+  "notes": "Paper published Aug 2022 (ApJS); ~21,000 deg2 in grizY via NOIRLab Astro Data Lab; release date not found"
+ },
+ {
+  "survey": "Legacy Surveys",
+  "survey_id": "legacy-surveys",
+  "release": "DR10 (adds DECam i-band south)",
+  "start": null,
+  "end": null,
+  "kind": "undated",
+  "status": "confirmed",
+  "evidence": "secondary",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric"
+  ],
+  "url": "https://d.legacysurvey.org/dr10/description",
+  "notes": "Public release; DECaLS data observed 2014-2019; release date not found"
+ },
+ {
+  "survey": "Legacy Surveys",
+  "survey_id": "legacy-surveys",
+  "release": "DR11 (southern expansion)",
+  "start": null,
+  "end": null,
+  "kind": "undated",
+  "status": "target",
+  "evidence": "secondary",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric"
+  ],
+  "url": "https://d.legacysurvey.org/dr11/description",
+  "notes": "Description online; early preview layer only; public release date not confirmed"
+ },
+ {
+  "survey": "NOIRLab Source Catalog",
+  "survey_id": "nsc",
+  "release": "NOIRLab Source Catalog DR2",
+  "start": null,
+  "end": null,
+  "kind": "undated",
+  "status": "confirmed",
+  "evidence": "secondary",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric"
+  ],
+  "url": "https://arxiv.org/abs/2011.08868",
+  "notes": "Paper published Mar 2021 (AJ/ApJS); 3.9 billion objects from DECam, Mosaic3 and 90Prime; release date not found"
  }
 ];

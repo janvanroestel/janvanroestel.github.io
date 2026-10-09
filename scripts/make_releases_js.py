@@ -37,6 +37,9 @@ ALLOWED: dict[str, set[str]] = {
 SURVEY_BANDS: dict[str, list[str]] = {
     "4most": ["optical", "spectroscopic"],
     "hsc-ssp": ["optical", "photometric"],
+    "delve": ["optical", "photometric"],
+    "legacy-surveys": ["optical", "photometric"],
+    "nsc": ["optical", "photometric"],
     "neowise": ["IR", "photometric", "time-domain"],
     "chandra": ["high-energy"],
     "xmm-newton": ["high-energy"],
@@ -77,7 +80,7 @@ SURVEY_BANDS: dict[str, list[str]] = {
 }
 
 SURVEY_NAMES: dict[str, str] = {
-    "hsc-ssp": "HSC-SSP", "neowise": "NEOWISE", "chandra": "Chandra", "xmm-newton": "XMM-Newton",
+    "hsc-ssp": "HSC-SSP", "delve": "DELVE", "legacy-surveys": "Legacy Surveys", "nsc": "NOIRLab Source Catalog", "neowise": "NEOWISE", "chandra": "Chandra", "xmm-newton": "XMM-Newton",
     "ska": "SKA", "moons": "MOONS", "vlass": "VLASS", "lvk": "LIGO-Virgo-KAGRA",
     "fermi-lat": "Fermi-LAT", "hetdex": "HETDEX", "galah": "GALAH",
     "4most": "4MOST", "panstarrs": "Pan-STARRS", "pfs": "PFS", "argus-array": "Argus Array", "atlas": "ATLAS", "blackgem": "BlackGEM",
