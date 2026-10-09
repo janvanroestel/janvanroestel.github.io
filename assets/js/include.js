@@ -11,6 +11,7 @@ const NAV_HTML = `
             <li><a href="index.html" data-page="home">Home</a></li>
             <li><a href="research.html" data-page="research">Research</a></li>
             <li><a href="data-code.html" data-page="data">Data &amp; Code</a></li>
+            <li><a href="timeline.html" data-page="timeline">Releases</a></li>
             <li><a href="talks.html" data-page="talks">Talks</a></li>
             <li><a href="cv.html" data-page="cv">CV</a></li>
             <li><a href="contact.html" data-page="contact">Contact</a></li>

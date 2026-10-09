@@ -625,3 +625,262 @@ footer p {
         padding: 2rem 0;
     }
 }
+
+/* ===== Survey Release Timeline ===== */
+.tl-intro {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.tl-error {
+    background: #fff5f5;
+    border: 1px solid #feb2b2;
+    color: #9b2c2c;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.tl-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.tl-filters,
+.tl-options,
+.tl-range {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.tl-chip {
+    font: inherit;
+    font-size: 0.9rem;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    background: var(--bg-card);
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.tl-chip[aria-pressed="true"] {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.tl-chip-clear {
+    border-color: var(--border-color);
+    color: var(--text-secondary);
+}
+
+.tl-chip:focus-visible,
+.tl-toggle input:focus-visible,
+.tl-table a:focus-visible,
+.tl-svg a:focus-visible {
+    outline: 3px solid #ed8936;
+    outline-offset: 2px;
+}
+
+.tl-toggle {
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.tl-legend {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.2rem;
+    padding: 0;
+    margin: 0 0 1rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.tl-legend li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.tl-swatch {
+    display: inline-block;
+    width: 22px;
+    height: 12px;
+    border-radius: 2px;
+    border: 2px solid var(--accent);
+}
+
+.tl-sw-confirmed { background: var(--accent); }
+.tl-sw-target { background: repeating-linear-gradient(45deg, var(--accent) 0 2px, transparent 2px 6px); }
+.tl-sw-projected { background: #ffffff; }
+.tl-sw-overdue { background: #ffffff; border-color: #c05621; border-style: dashed; }
+.tl-sw-secondary {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background: #dd6b20;
+}
+.tl-swatch-text {
+    color: var(--accent);
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.tl-figure-wrap {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--bg-card);
+    margin-bottom: 1rem;
+}
+
+.tl-scroll {
+    overflow-x: auto;
+    padding: 0.5rem 0;
+}
+
+.tl-svg {
+    display: block;
+    font-family: var(--font-sans);
+}
+
+.tl-stripe { fill: var(--bg-secondary); }
+.tl-grid { stroke: var(--border-color); stroke-width: 1; }
+.tl-axis { fill: var(--text-secondary); font-size: 12px; }
+.tl-today { stroke: #c53030; stroke-width: 1.5; stroke-dasharray: 4 3; }
+.tl-today-label { fill: #c53030; }
+.tl-label { fill: var(--text-heading); font-size: 13px; font-weight: 600; }
+.tl-hatch-line { stroke: var(--accent); stroke-width: 2; }
+
+.tl-item .tl-shape,
+.tl-item .tl-tail {
+    stroke: var(--accent);
+    stroke-width: 2;
+    fill: #ffffff;
+    cursor: pointer;
+}
+.tl-item.tl-confirmed .tl-shape { fill: var(--accent); }
+.tl-item.tl-target .tl-shape { fill: url(#tl-hatch); }
+.tl-item.tl-projected .tl-shape { fill: #ffffff; }
+.tl-item.tl-overdue .tl-shape,
+.tl-item.tl-overdue .tl-tail {
+    stroke: #c05621;
+    stroke-dasharray: 3 2;
+}
+.tl-item.tl-overdue.tl-confirmed .tl-shape { fill: #c05621; }
+.tl-item .tl-tail { stroke-dasharray: 2 4; }
+.tl-badge { fill: #dd6b20; }
+
+.tl-item:focus { outline: none; }
+.tl-item:focus-visible .tl-shape {
+    stroke: var(--text-heading);
+    stroke-width: 3;
+}
+
+.tl-tip {
+    position: fixed;
+    transform: translate(-50%, calc(-100% - 10px));
+    z-index: 1000;
+    max-width: 320px;
+    background: var(--text-heading);
+    color: #ffffff;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    pointer-events: none;
+}
+.tl-tip div + div { margin-top: 0.25rem; }
+
+.tl-empty {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-secondary);
+}
+
+.tl-count {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.tl-table-wrap { overflow-x: auto; }
+
+.tl-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.tl-table caption {
+    text-align: left;
+    color: var(--text-secondary);
+    padding-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.tl-table th,
+.tl-table td {
+    text-align: left;
+    padding: 0.5rem 0.6rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+
+.tl-table thead th {
+    color: var(--text-heading);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.tl-table .tl-year th {
+    background: var(--bg-secondary);
+    color: var(--text-heading);
+    font-size: 1rem;
+}
+
+.tl-table small {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.tl-table tr.tl-overdue td:first-child { border-left: 3px solid #c05621; }
+.tl-table tr.tl-overdue td:first-child { font-style: italic; }
+
+.tl-notes {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .tl-figure-wrap { display: none; }
+    .tl-table { font-size: 0.85rem; }
+    .tl-table th, .tl-table td { padding: 0.45rem 0.4rem; }
+    .tl-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .tl-table tr { display: block; border-bottom: 1px solid var(--border-color); padding: 0.4rem 0; }
+    .tl-table td { display: block; border: none; padding: 0.15rem 0; }
+    .tl-table .tl-year { display: block; }
+    .tl-table .tl-year th { display: block; }
+}
+.tl-controls[hidden],
+.tl-table[hidden],
+.tl-empty[hidden],
+.tl-error[hidden],
+.tl-figure-wrap [hidden] { display: none !important; }
