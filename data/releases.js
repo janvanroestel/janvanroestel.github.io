@@ -63,7 +63,7 @@ const RELEASES = [
   "release": "First public alert stream",
   "start": "2026-02-24",
   "end": null,
-  "kind": "exact",
+  "kind": "ongoing",
   "status": "confirmed",
   "evidence": "secondary",
   "event": "alert_stream",
@@ -71,7 +71,8 @@ const RELEASES = [
   "bands": [
    "optical",
    "photometric",
-   "time-domain"
+   "time-domain",
+   "alerts"
   ],
   "url": "https://www.aura-astronomy.org/blog/2026/02/25/nsf-doe-vera-c-rubin-observatory-launches-real-time-discovery-machine-for-monitoring-the-night-sky/",
   "notes": "Alerts generated night of 2026-02-24; NSF/DOE/NOIRLab announcement dated 2026-02-25; point event"
@@ -713,5 +714,214 @@ const RELEASES = [
   ],
   "url": "https://sdss.org/dr20/",
   "notes": "Publicly available 30 July 2026 per SDSS data release page and news item; DR20 first all-sky BOSS and LCO southern spectra"
+ },
+ {
+  "survey": "4MOST",
+  "survey_id": "4most",
+  "release": "First light",
+  "start": "2025-10-18",
+  "end": null,
+  "kind": "exact",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "milestone",
+  "access": "public",
+  "bands": [
+   "optical",
+   "spectroscopic"
+  ],
+  "url": "https://www.physik.lmu.de/en/latest-news/news-overview/news/first-light-in-the-4-metre-multi-object-spectroscopic-telescope.html",
+  "notes": "First light on ESO VISTA, Paranal, 18 Oct 2025 (institutional news)"
+ },
+ {
+  "survey": "4MOST",
+  "survey_id": "4most",
+  "release": "Main survey start (expected)",
+  "start": "2026-08-01",
+  "end": "2026-08-31",
+  "kind": "window",
+  "status": "projected",
+  "evidence": "secondary",
+  "event": "milestone",
+  "access": "public",
+  "bands": [
+   "optical",
+   "spectroscopic"
+  ],
+  "url": "https://ag2026.astronomische-gesellschaft.de/view_abstract.php?id=163",
+  "notes": "Conference abstract expects normal science in Aug 2026; June 2026 All Hands report says survey still in validation; start not confirmed"
+ },
+ {
+  "survey": "WEAVE",
+  "survey_id": "weave",
+  "release": "First light (WHT spectrograph)",
+  "start": "2023-02-07",
+  "end": null,
+  "kind": "exact",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "milestone",
+  "access": "public",
+  "bands": [
+   "optical",
+   "spectroscopic"
+  ],
+  "url": "https://www.nottingham.ac.uk/news/nottingham-astronomers-welcome-first-light-from-weave",
+  "notes": "ING/WEAVE first-light release dated 7 Feb 2023; first object Stephan's Quintet (LIFU)"
+ },
+ {
+  "survey": "WEAVE",
+  "survey_id": "weave",
+  "release": "First public data release",
+  "start": null,
+  "end": null,
+  "kind": "undated",
+  "status": "target",
+  "evidence": "secondary",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "optical",
+   "spectroscopic"
+  ],
+  "url": "https://was.tng.iac.es/?p=141",
+  "notes": "Policy: first public release 24 months after survey start, then yearly; no date or contents found"
+ },
+ {
+  "survey": "UVEX",
+  "survey_id": "uvex",
+  "release": "Launch (planned)",
+  "start": "2030-01-01",
+  "end": "2030-12-31",
+  "kind": "window",
+  "status": "target",
+  "evidence": "official",
+  "event": "launch",
+  "access": "public",
+  "bands": [
+   "UV",
+   "photometric",
+   "time-domain"
+  ],
+  "url": "https://uvex.caltech.edu/page/about",
+  "notes": "NASA: launch planned 2030 (year only), then two-year all-sky survey; no data policy found"
+ },
+ {
+  "survey": "Argus Array",
+  "survey_id": "argus-array",
+  "release": "First light (expected)",
+  "start": "2027-01-01",
+  "end": "2027-12-31",
+  "kind": "window",
+  "status": "projected",
+  "evidence": "secondary",
+  "event": "milestone",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric",
+   "time-domain"
+  ],
+  "url": "https://www.unc.edu/posts/2026/05/28/astronomer-nicholas-law-leads-argus-array-project/",
+  "notes": "Expected 2027 (year only) per UNC news May 2026; site not formally announced"
+ },
+ {
+  "survey": "LS4",
+  "survey_id": "ls4",
+  "release": "Survey operations start (planned)",
+  "start": "2025-06-01",
+  "end": "2025-08-31",
+  "kind": "window",
+  "status": "target",
+  "evidence": "secondary",
+  "event": "milestone",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric",
+   "time-domain"
+  ],
+  "url": "https://arxiv.org/pdf/2503.14579",
+  "notes": "Planned for mid-2025 (CIERA report, March 2025). No confirmed first light or live alerts found"
+ },
+ {
+  "survey": "ZTF",
+  "survey_id": "ztf",
+  "release": "Public alert stream",
+  "start": "2018-06-05",
+  "end": null,
+  "kind": "ongoing",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "alert_stream",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric",
+   "time-domain",
+   "alerts"
+  ],
+  "url": "https://www.astronomerstelegram.org/?read=11685",
+  "notes": "Public alerts announced by ATel on 5 Jun 2018; distributed in near real time to brokers"
+ },
+ {
+  "survey": "BlackGEM",
+  "survey_id": "blackgem",
+  "release": "Public transient alerts (planned)",
+  "start": null,
+  "end": null,
+  "kind": "undated",
+  "status": "target",
+  "evidence": "secondary",
+  "event": "alert_stream",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric",
+   "time-domain",
+   "alerts"
+  ],
+  "url": "https://astro.ru.nl/~pgroot/BlackGEM_Surveys.pdf",
+  "notes": "Presentation says transients go to TNS and brokers once validated; no start date or live stream found"
+ },
+ {
+  "survey": "ATLAS",
+  "survey_id": "atlas",
+  "release": "Public transient announcements",
+  "start": null,
+  "end": null,
+  "kind": "undated",
+  "status": "confirmed",
+  "evidence": "secondary",
+  "event": "alert_stream",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric",
+   "time-domain",
+   "alerts"
+  ],
+  "url": "https://arxiv.org/pdf/2004.03511",
+  "notes": "2020 paper: 10-15 candidates per night announced publicly; start date not found"
+ },
+ {
+  "survey": "LS4",
+  "survey_id": "ls4",
+  "release": "Public alert stream (planned)",
+  "start": null,
+  "end": null,
+  "kind": "undated",
+  "status": "target",
+  "evidence": "secondary",
+  "event": "alert_stream",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric",
+   "time-domain",
+   "alerts"
+  ],
+  "url": "https://arxiv.org/pdf/2503.14579",
+  "notes": "Public survey alerts planned via established brokers; no live stream confirmed"
  }
 ];

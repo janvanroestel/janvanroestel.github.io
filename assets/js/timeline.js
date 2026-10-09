@@ -40,10 +40,17 @@
         return Math.floor(Date.now() / DAY_MS);
     }
 
-    function endDay(r) { return dayNum(r.end || r.start); }
+    // Undated rows (no date found) appear in the table only.
+    function isDated(r) { return Boolean(r.start); }
+    // Ongoing rows (live alert streams) never end, so they are never completed or overdue.
+    function endDay(r) { return r.kind === 'ongoing' ? Infinity : dayNum(r.end || r.start); }
     function startDay(r) { return dayNum(r.start); }
-    function isCompleted(r) { return r.status === 'confirmed' && endDay(r) < today; }
-    function isOverdue(r) { return r.status !== 'confirmed' && endDay(r) < today; }
+    function isCompleted(r) {
+        return isDated(r) && r.kind !== 'ongoing' && r.status === 'confirmed' && endDay(r) < today;
+    }
+    function isOverdue(r) {
+        return isDated(r) && r.kind !== 'ongoing' && r.status !== 'confirmed' && endDay(r) < today;
+    }
     function isApprox(r) { return r.kind === 'window' && APPROX_RE.test(r.notes); }
 
     function passesBands(r) {
@@ -55,6 +62,7 @@
     }
 
     function inRange(r, x0, x1) {
+        if (!isDated(r)) return false;
         return !(endDay(r) < x0 || startDay(r) > x1);
     }
 
@@ -63,6 +71,8 @@
             return `${r.start} to ${r.end}${isApprox(r) ? ' (approximate)' : ''}`;
         }
         if (r.kind === 'lower_bound') return `not before ${r.start}`;
+        if (r.kind === 'ongoing') return `since ${r.start}`;
+        if (r.kind === 'undated') return 'date not found';
         return r.start;
     }
 
@@ -201,12 +211,17 @@
                 }, svg);
 
                 let anchorX;
-                if (r.kind === 'window') {
+                if (r.kind === 'window' || r.kind === 'ongoing') {
                     const xa = px(s);
                     const xb = px(Math.min(e + 1, x1));
                     anchorX = xa;
                     svgEl('rect', {
-                        x: xa, y: cy - 6, width: Math.max(xb - xa, 6), height: 12, rx: 2, class: 'tl-shape',
+                        x: xa,
+                        y: cy - 6,
+                        width: Math.max(xb - xa, 6),
+                        height: 12,
+                        rx: 2,
+                        class: r.kind === 'ongoing' ? 'tl-shape tl-bar-ongoing' : 'tl-shape',
                     }, group);
                 } else {
                     anchorX = px(s);
@@ -241,12 +256,14 @@
     function renderTable(list) {
         const table = document.getElementById('tl-table');
         table.querySelectorAll('tbody').forEach((tb) => tb.remove());
-        const sorted = [...list].sort((a, b) => (a.start.localeCompare(b.start) || a.survey.localeCompare(b.survey)));
+        // Undated rows sort last under their own heading.
+        const key = (r) => r.start || '9999';
+        const sorted = [...list].sort((a, b) => (key(a).localeCompare(key(b)) || a.survey.localeCompare(b.survey)));
 
         let year = null;
         let body = null;
         sorted.forEach((r) => {
-            const y = r.start.slice(0, 4);
+            const y = r.start ? r.start.slice(0, 4) : 'Undated';
             if (y !== year) {
                 year = y;
                 body = document.createElement('tbody');

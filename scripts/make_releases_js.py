@@ -26,14 +26,22 @@ REQUIRED = ["survey", "release", "date_start", "date_end", "date_status",
             "event_type", "access"]
 ALLOWED: dict[str, set[str]] = {
     "date_status": {"confirmed", "target", "projected"},
-    "date_kind": {"exact", "window", "lower_bound"},
+    "date_kind": {"exact", "window", "lower_bound", "ongoing", "undated"},
     "evidence": {"official", "secondary"},
     "event_type": {"data_release", "alert_stream", "launch", "milestone", "paper"},
     "access": {"public", "restricted"},
 }
 
 # Filter tags per survey. Chips are multi-select (OR logic).
+# 'alerts' is added per row for event_type == alert_stream (public alert streams).
 SURVEY_BANDS: dict[str, list[str]] = {
+    "4most": ["optical", "spectroscopic"],
+    "argus-array": ["optical", "photometric", "time-domain"],
+    "atlas": ["optical", "photometric", "time-domain"],
+    "blackgem": ["optical", "photometric", "time-domain"],
+    "ls4": ["optical", "photometric", "time-domain"],
+    "uvex": ["UV", "photometric", "time-domain"],
+    "weave": ["optical", "spectroscopic"],
     "askap": ["radio", "time-domain"],
     "chime": ["radio", "time-domain"],
     "des": ["optical", "photometric"],
@@ -56,6 +64,8 @@ SURVEY_BANDS: dict[str, list[str]] = {
 }
 
 SURVEY_NAMES: dict[str, str] = {
+    "4most": "4MOST", "argus-array": "Argus Array", "atlas": "ATLAS", "blackgem": "BlackGEM",
+    "ls4": "LS4", "uvex": "UVEX", "weave": "WEAVE",
     "askap": "ASKAP/VAST", "chime": "CHIME/FRB", "des": "DES", "desi": "DESI",
     "einstein-probe": "Einstein Probe", "erosita": "eROSITA", "euclid": "Euclid",
     "gaia": "Gaia", "kids": "KiDS", "lamost": "LAMOST", "lofar-lotss": "LOFAR LoTSS",
@@ -74,28 +84,38 @@ def parse_row(row: dict[str, str], line: int) -> dict[str, object]:
             raise ValueError(f"line {line}: {key}={row[key]!r} not in {sorted(allowed)}")
     if row["survey"] not in SURVEY_BANDS:
         raise ValueError(f"line {line}: survey {row['survey']!r} has no band tags")
-    start = date.fromisoformat(row["date_start"])
+    kind = row["date_kind"]
+    start = date.fromisoformat(row["date_start"]) if row["date_start"] else None
     end = date.fromisoformat(row["date_end"]) if row["date_end"] else None
-    if end is not None and end < start:
-        raise ValueError(f"line {line}: date_end before date_start")
-    if row["date_kind"] == "window" and end is None:
+    if kind == "undated":
+        if start is not None or end is not None:
+            raise ValueError(f"line {line}: undated rows must have no dates")
+    else:
+        if start is None:
+            raise ValueError(f"line {line}: date_start required for date_kind={kind!r}")
+        if end is not None and end < start:
+            raise ValueError(f"line {line}: date_end before date_start")
+    if kind == "window" and end is None:
         raise ValueError(f"line {line}: window without date_end")
-    if row["date_kind"] != "window" and end is not None:
-        raise ValueError(f"line {line}: date_end set but date_kind={row['date_kind']!r}")
+    if kind in ("exact", "lower_bound", "ongoing") and end is not None:
+        raise ValueError(f"line {line}: date_end set but date_kind={kind!r}")
     if not row["source_url"].startswith("https://"):
         raise ValueError(f"line {line}: source_url is not https")
+    bands = list(SURVEY_BANDS[row["survey"]])
+    if row["event_type"] == "alert_stream":
+        bands.append("alerts")
     return {
         "survey": SURVEY_NAMES[row["survey"]],
         "survey_id": row["survey"],
         "release": row["release"],
-        "start": row["date_start"],
+        "start": row["date_start"] or None,
         "end": row["date_end"] or None,
-        "kind": row["date_kind"],
+        "kind": kind,
         "status": row["date_status"],
         "evidence": row["evidence"],
         "event": row["event_type"],
         "access": row["access"],
-        "bands": SURVEY_BANDS[row["survey"]],
+        "bands": bands,
         "url": row["source_url"],
         "notes": row["notes"],
     }

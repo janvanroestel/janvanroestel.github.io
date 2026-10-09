@@ -884,3 +884,6 @@ footer p {
 .tl-empty[hidden],
 .tl-error[hidden],
 .tl-figure-wrap [hidden] { display: none !important; }
+
+.tl-sw-ongoing { background: linear-gradient(90deg, var(--accent), rgba(49, 130, 206, 0.2)); }
+.tl-bar-ongoing { fill-opacity: 0.35; }

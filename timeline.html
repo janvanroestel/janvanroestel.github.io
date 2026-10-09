@@ -39,9 +39,11 @@
                         <button type="button" class="tl-chip" data-band="spectroscopic" aria-pressed="false">Spectroscopic</button>
                         <button type="button" class="tl-chip" data-band="IR" aria-pressed="false">Infrared</button>
                         <button type="button" class="tl-chip" data-band="radio" aria-pressed="false">Radio</button>
+                        <button type="button" class="tl-chip" data-band="UV" aria-pressed="false">UV</button>
                         <button type="button" class="tl-chip" data-band="high-energy" aria-pressed="false">High-energy</button>
                         <button type="button" class="tl-chip" data-band="astrometry" aria-pressed="false">Astrometry</button>
                         <button type="button" class="tl-chip" data-band="time-domain" aria-pressed="false">Time-domain</button>
+                        <button type="button" class="tl-chip" data-band="alerts" aria-pressed="false">Public alerts</button>
                         <button type="button" class="tl-chip tl-chip-clear" id="tl-clear">Clear filters</button>
                     </div>
 
@@ -66,6 +68,8 @@
                     <li><span class="tl-swatch-text">&#9679;</span> Exact date</li>
                     <li><span class="tl-swatch-text">&#9644;</span> Date window</li>
                     <li><span class="tl-swatch-text">&#8594;</span> Not before date</li>
+                    <li><span class="tl-swatch tl-sw-ongoing"></span> Ongoing (since date)</li>
+                    <li><span class="tl-swatch-text">&#8943;</span> Undated (table only)</li>
                 </ul>
 
                 <div class="tl-figure-wrap">
@@ -103,7 +107,8 @@
                         <li>Target and projected dates are not official confirmations.</li>
                         <li>Roman launch and test-image dates rest on news reports, not a NASA page.</li>
                         <li>The DESI DR2 date comes from a third-party paper.</li>
-                        <li>Surveys without public release dates (ATLAS, BlackGEM, Pan-STARRS, 4MOST, WEAVE, PFS, GALAH, MOONS, CHEOPS, SKA) are not shown.</li>
+                        <li>Undated rows (no date found) are listed in the table only. Pan-STARRS, PFS, GALAH, MOONS, CHEOPS and SKA are not yet included.</li>
+                        <li>Public alert facilities: GOTO and WFST are not listed because no public alert stream was confirmed.</li>
                     </ul>
                 </div>
             </div>
