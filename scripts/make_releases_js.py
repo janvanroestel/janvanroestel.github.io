@@ -36,6 +36,17 @@ ALLOWED: dict[str, set[str]] = {
 # 'alerts' is added per row for event_type == alert_stream (public alert streams).
 SURVEY_BANDS: dict[str, list[str]] = {
     "4most": ["optical", "spectroscopic"],
+    "hsc-ssp": ["optical", "photometric"],
+    "neowise": ["IR", "photometric", "time-domain"],
+    "chandra": ["high-energy"],
+    "xmm-newton": ["high-energy"],
+    "ska": ["radio"],
+    "moons": ["optical", "IR", "spectroscopic"],
+    "vlass": ["radio", "time-domain"],
+    "lvk": ["time-domain"],
+    "fermi-lat": ["high-energy"],
+    "hetdex": ["optical", "spectroscopic"],
+    "galah": ["optical", "spectroscopic"],
     "panstarrs": ["optical", "photometric", "time-domain"],
     "pfs": ["optical", "IR", "spectroscopic"],
     "argus-array": ["optical", "photometric", "time-domain"],
@@ -66,6 +77,9 @@ SURVEY_BANDS: dict[str, list[str]] = {
 }
 
 SURVEY_NAMES: dict[str, str] = {
+    "hsc-ssp": "HSC-SSP", "neowise": "NEOWISE", "chandra": "Chandra", "xmm-newton": "XMM-Newton",
+    "ska": "SKA", "moons": "MOONS", "vlass": "VLASS", "lvk": "LIGO-Virgo-KAGRA",
+    "fermi-lat": "Fermi-LAT", "hetdex": "HETDEX", "galah": "GALAH",
     "4most": "4MOST", "panstarrs": "Pan-STARRS", "pfs": "PFS", "argus-array": "Argus Array", "atlas": "ATLAS", "blackgem": "BlackGEM",
     "ls4": "LS4", "uvex": "UVEX", "weave": "WEAVE",
     "askap": "ASKAP/VAST", "chime": "CHIME/FRB", "des": "DES", "desi": "DESI",

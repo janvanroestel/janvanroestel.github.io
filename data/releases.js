@@ -961,5 +961,254 @@ const RELEASES = [
   ],
   "url": "https://www.mpa-garching.mpg.de/1108046/news20250113",
   "notes": "Subaru/MPA announcement (Jan 2025): science operations to begin Feb 2025; actual start not confirmed in sources. First light date not found"
+ },
+ {
+  "survey": "HSC-SSP",
+  "survey_id": "hsc-ssp",
+  "release": "PDR3 (S20A, ~670 deg2 wide)",
+  "start": "2021-08-31",
+  "end": null,
+  "kind": "exact",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric"
+  ],
+  "url": "https://hsc-release.mtk.nao.ac.jp",
+  "notes": "Public Data Release 3 on 31 Aug 2021 (earlier planned for Aug 2021)"
+ },
+ {
+  "survey": "LOFAR LoTSS",
+  "survey_id": "lofar-lotss",
+  "release": "LoTSS DR2",
+  "start": "2022-02-01",
+  "end": "2022-02-28",
+  "kind": "window",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "radio",
+   "photometric"
+  ],
+  "url": "https://www.lofar-surveys.org/dr2_release.html",
+  "notes": "Month only: released February 2022 per ASTRON; ~27% of northern sky"
+ },
+ {
+  "survey": "NEOWISE",
+  "survey_id": "neowise",
+  "release": "NEOWISE 2024 data release (year 10)",
+  "start": "2024-03-21",
+  "end": null,
+  "kind": "exact",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "IR",
+   "photometric",
+   "time-domain"
+  ],
+  "url": "https://irsa.ipac.caltech.edu/data/WISE/docs/release/NEOWISE/neowise_2024_release_intro.html",
+  "notes": "Year-10 data released 21 Mar 2024 via IRSA"
+ },
+ {
+  "survey": "NEOWISE",
+  "survey_id": "neowise",
+  "release": "NEOWISE final data release",
+  "start": "2024-11-14",
+  "end": null,
+  "kind": "exact",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "IR",
+   "photometric",
+   "time-domain"
+  ],
+  "url": "https://neowise.ipac.caltech.edu/news/neowise20241114",
+  "notes": "Final release (year 11 data, Dec 2023 to Aug 2024); mission ended Aug 2024"
+ },
+ {
+  "survey": "Chandra",
+  "survey_id": "chandra",
+  "release": "Chandra Source Catalog 2.1",
+  "start": "2024-04-02",
+  "end": null,
+  "kind": "exact",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "high-energy"
+  ],
+  "url": "https://cxc.harvard.edu/csc2.0/about2.1.html",
+  "notes": "Public release 2 Apr 2024; 407,806 unique X-ray sources"
+ },
+ {
+  "survey": "XMM-Newton",
+  "survey_id": "xmm-newton",
+  "release": "4XMM-DR14",
+  "start": "2024-07-09",
+  "end": null,
+  "kind": "exact",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "high-energy"
+  ],
+  "url": "https://heasarc.gsfc.nasa.gov/w3browse/all/xmmssc.html",
+  "notes": "Released 9 Jul 2024 (HEASARC announcement); ~692k unique X-ray sources"
+ },
+ {
+  "survey": "SKA",
+  "survey_id": "ska",
+  "release": "First SKA-Low image",
+  "start": "2025-03-01",
+  "end": "2025-03-31",
+  "kind": "window",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "milestone",
+  "access": "public",
+  "bands": [
+   "radio"
+  ],
+  "url": "https://www.csiro.au/en/news/All/News/2025/March/SKA-Low-first-image",
+  "notes": "Month only: first image from four SKA-Low stations, March 2025 (CSIRO)"
+ },
+ {
+  "survey": "SKA",
+  "survey_id": "ska",
+  "release": "First public data release (planned)",
+  "start": "2027-06-01",
+  "end": "2027-08-31",
+  "kind": "window",
+  "status": "target",
+  "evidence": "secondary",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "radio"
+  ],
+  "url": "https://www.skao.int/sites/default/files/documents/Sciops_timeline_low_ppt.pdf",
+  "notes": "Planned mid-2027 (SKAO timeline slides); Jun-Aug window is our assumption; not confirmed"
+ },
+ {
+  "survey": "MOONS",
+  "survey_id": "moons",
+  "release": "First light",
+  "start": "2026-09-03",
+  "end": null,
+  "kind": "exact",
+  "status": "confirmed",
+  "evidence": "secondary",
+  "event": "milestone",
+  "access": "public",
+  "bands": [
+   "optical",
+   "IR",
+   "spectroscopic"
+  ],
+  "url": "https://www.media.inaf.it/2026/09/03/moons-prima-luce/",
+  "notes": "First light at VLT UT1 on 3 Sep 2026 (INAF report; ESO announcement not fetched)"
+ },
+ {
+  "survey": "VLASS",
+  "survey_id": "vlass",
+  "release": "Epoch 4.1 observations",
+  "start": "2025-08-26",
+  "end": "2026-02-28",
+  "kind": "window",
+  "status": "confirmed",
+  "evidence": "secondary",
+  "event": "milestone",
+  "access": "public",
+  "bands": [
+   "radio",
+   "time-domain"
+  ],
+  "url": "https://public.nrao.edu/vlass/",
+  "notes": "Observations 26 Aug 2025 to Feb 2026 (July 2026 report); processed products will be released in stages"
+ },
+ {
+  "survey": "LIGO-Virgo-KAGRA",
+  "survey_id": "lvk",
+  "release": "GWTC-4.0 and O4a strain data",
+  "start": "2025-08-26",
+  "end": null,
+  "kind": "exact",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "time-domain"
+  ],
+  "url": "https://gwosc.org/O4/O4a",
+  "notes": "LVK release of O4a strain data and GWTC-4.0 catalogue, 26 Aug 2025 (later GWTC-4.1 exists)"
+ },
+ {
+  "survey": "Fermi-LAT",
+  "survey_id": "fermi-lat",
+  "release": "4FGL-DR4 (14-year catalogue)",
+  "start": "2023-07-24",
+  "end": null,
+  "kind": "exact",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "high-energy"
+  ],
+  "url": "https://fermi.gsfc.nasa.gov/ssc/data/access/lat/14yr_catalog/",
+  "notes": "FSSC catalogue file dated 24 Jul 2023 (revised Nov 2023)"
+ },
+ {
+  "survey": "HETDEX",
+  "survey_id": "hetdex",
+  "release": "Public Data Release 1 (PDR1)",
+  "start": "2026-06-03",
+  "end": null,
+  "kind": "exact",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "optical",
+   "spectroscopic"
+  ],
+  "url": "https://www.mpe.mpg.de/8205948/news20260603",
+  "notes": "Full survey data (Jan 2017 to Jul 2024): 431,713 IFU cubes and HPSC2 catalogue"
+ },
+ {
+  "survey": "GALAH",
+  "survey_id": "galah",
+  "release": "DR4 (one million stars)",
+  "start": null,
+  "end": null,
+  "kind": "undated",
+  "status": "confirmed",
+  "evidence": "secondary",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "optical",
+   "spectroscopic"
+  ],
+  "url": "https://research.chalmers.se/publication/546859",
+  "notes": "Paper in PASA 2025; exact public release date not found"
  }
 ];
