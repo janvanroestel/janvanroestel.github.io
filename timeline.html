@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Data Releases - Jan van Roestel</title>
+    <meta name="description" content="Interactive overview of data releases and milestones from optical, infrared, radio, spectroscopic and high-energy surveys.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="assets/js/include.js"></script>
+</head>
+<body data-page="timeline">
+    <script>writeNav()</script>
+
+    <main>
+        <header class="page-header">
+            <div class="container">
+                <h1>Survey Data Releases &amp; Milestones</h1>
+                <p>Data releases and milestones from major optical, infrared, radio, spectroscopic and high-energy surveys</p>
+            </div>
+        </header>
+
+        <section>
+            <div class="container">
+                <p class="tl-intro">Filter by observing type, then hover or focus a marker for details. Clicking a marker, or the Source link in the table, opens the source in a new tab. Dates marked target or projected are not official confirmations.</p>
+
+                <div id="tl-error" class="tl-error" role="alert" hidden>
+                    The release data could not be loaded. Please try again later.
+                </div>
+
+                <noscript>
+                    <p class="tl-error">This timeline needs JavaScript. The data is also available on the Data &amp; Code page.</p>
+                </noscript>
+
+                <div class="tl-controls">
+                    <div class="tl-filters" role="group" aria-label="Filter by observing type">
+                        <button type="button" class="tl-chip" data-band="optical" aria-pressed="false">Optical</button>
+                        <button type="button" class="tl-chip" data-band="photometric" aria-pressed="false">Photometric</button>
+                        <button type="button" class="tl-chip" data-band="spectroscopic" aria-pressed="false">Spectroscopic</button>
+                        <button type="button" class="tl-chip" data-band="IR" aria-pressed="false">Infrared</button>
+                        <button type="button" class="tl-chip" data-band="radio" aria-pressed="false">Radio</button>
+                        <button type="button" class="tl-chip" data-band="UV" aria-pressed="false">UV</button>
+                        <button type="button" class="tl-chip" data-band="high-energy" aria-pressed="false">High-energy</button>
+                        <button type="button" class="tl-chip" data-band="astrometry" aria-pressed="false">Astrometry</button>
+                        <button type="button" class="tl-chip" data-band="time-domain" aria-pressed="false">Time-domain</button>
+                        <button type="button" class="tl-chip" data-band="alerts" aria-pressed="false">Public alerts</button>
+                        <button type="button" class="tl-chip tl-chip-clear" id="tl-clear">Clear filters</button>
+                    </div>
+
+                    <div class="tl-options">
+                        <div class="tl-range" role="group" aria-label="Figure year range">
+                            <button type="button" class="tl-chip" data-range="core" aria-pressed="true">2024&ndash;2027</button>
+                            <button type="button" class="tl-chip" data-range="all" aria-pressed="false">2024&ndash;2031</button>
+                        </div>
+                        <label class="tl-toggle">
+                            <input type="checkbox" id="tl-completed">
+                            Show completed releases
+                        </label>
+                    </div>
+                </div>
+
+                <ul class="tl-legend" aria-label="Legend">
+                    <li><span class="tl-swatch tl-sw-confirmed"></span> Confirmed</li>
+                    <li><span class="tl-swatch tl-sw-target"></span> Target (not confirmed)</li>
+                    <li><span class="tl-swatch tl-sw-projected"></span> Projected (not confirmed)</li>
+                    <li><span class="tl-swatch tl-sw-overdue"></span> Overdue: date passed, not confirmed</li>
+                    <li><span class="tl-swatch tl-sw-secondary"></span> Secondary source only</li>
+                    <li><span class="tl-swatch-text">&#9679;</span> Exact date</li>
+                    <li><span class="tl-swatch-text">&#9644;</span> Date window</li>
+                    <li><span class="tl-swatch-text">&#8594;</span> Not before date</li>
+                    <li><span class="tl-swatch tl-sw-ongoing"></span> Ongoing (since date)</li>
+                    <li><span class="tl-swatch-text">&#8943;</span> Undated (table only)</li>
+                </ul>
+
+                <div class="tl-figure-wrap">
+                    <div id="tl-figure" class="tl-scroll" role="region" aria-label="Timeline figure. The table below lists the same releases."></div>
+                </div>
+
+                <div id="tl-empty" class="tl-empty" hidden>
+                    <p>No releases match these filters.</p>
+                    <button type="button" class="btn btn-outline" id="tl-clear-empty">Clear filters</button>
+                </div>
+
+                <p id="tl-count" class="tl-count" aria-live="polite"></p>
+
+                <div class="tl-table-wrap">
+                    <table id="tl-table" class="tl-table" hidden>
+                        <caption>Releases matching the filters above. The year range applies only to the figure.</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Survey</th>
+                                <th scope="col">Release</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Evidence</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Access</th>
+                                <th scope="col">Source</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <div class="tl-notes">
+                    <p>Last reviewed: <span id="tl-reviewed"></span>. Entries marked secondary were checked against search results or third-party papers, not the official page. Release schedules change, so check the source before relying on a date.</p>
+                    <ul>
+                        <li>Target and projected dates are not official confirmations.</li>
+                        <li>Roman launch and test-image dates rest on news reports, not a NASA page.</li>
+                        <li>The DESI DR2 date comes from a third-party paper.</li>
+                        <li>Public alerts: ZTF and Rubin (VRO) are live. LS4, Roman (RAPID), ULTRASAT (launch Q4 2027), BlackGEM and ATLAS are planned or partly confirmed.</li>
+                        <li>Undated rows (no date found) are listed in the table only. Many DECam-era and catalogue releases have paper dates but no public-release date.</li>
+                        <li>GOTO and WFST are not listed because no public alert stream was confirmed. CHEOPS is not yet included.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="tl-tip" class="tl-tip" role="tooltip" hidden></div>
+
+    <script src="data/releases.js"></script>
+    <script src="assets/js/timeline.js"></script>
+    <script>writeFooter()</script>
+</body>
+</html>
