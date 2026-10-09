@@ -47,6 +47,7 @@ SURVEY_BANDS: dict[str, list[str]] = {
     "moons": ["optical", "IR", "spectroscopic"],
     "vlass": ["radio", "time-domain"],
     "lvk": ["time-domain"],
+    "ultrasat": ["UV", "photometric", "time-domain"],
     "fermi-lat": ["high-energy"],
     "hetdex": ["optical", "spectroscopic"],
     "galah": ["optical", "spectroscopic"],
@@ -80,7 +81,7 @@ SURVEY_BANDS: dict[str, list[str]] = {
 }
 
 SURVEY_NAMES: dict[str, str] = {
-    "hsc-ssp": "HSC-SSP", "delve": "DELVE", "legacy-surveys": "Legacy Surveys", "nsc": "NOIRLab Source Catalog", "neowise": "NEOWISE", "chandra": "Chandra", "xmm-newton": "XMM-Newton",
+    "hsc-ssp": "HSC-SSP", "ultrasat": "ULTRASAT", "delve": "DELVE", "legacy-surveys": "Legacy Surveys", "nsc": "NOIRLab Source Catalog", "neowise": "NEOWISE", "chandra": "Chandra", "xmm-newton": "XMM-Newton",
     "ska": "SKA", "moons": "MOONS", "vlass": "VLASS", "lvk": "LIGO-Virgo-KAGRA",
     "fermi-lat": "Fermi-LAT", "hetdex": "HETDEX", "galah": "GALAH",
     "4most": "4MOST", "panstarrs": "Pan-STARRS", "pfs": "PFS", "argus-array": "Argus Array", "atlas": "ATLAS", "blackgem": "BlackGEM",

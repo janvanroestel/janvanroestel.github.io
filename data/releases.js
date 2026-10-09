@@ -1318,5 +1318,65 @@ const RELEASES = [
   ],
   "url": "https://arxiv.org/abs/2011.08868",
   "notes": "Paper published Mar 2021 (AJ/ApJS); 3.9 billion objects from DECam, Mosaic3 and 90Prime; release date not found"
+ },
+ {
+  "survey": "ULTRASAT",
+  "survey_id": "ultrasat",
+  "release": "Launch (planned)",
+  "start": "2027-10-01",
+  "end": "2027-12-31",
+  "kind": "window",
+  "status": "target",
+  "evidence": "official",
+  "event": "launch",
+  "access": "public",
+  "bands": [
+   "UV",
+   "photometric",
+   "time-domain"
+  ],
+  "url": "https://www.weizmann.ac.il/ultrasat",
+  "notes": "Planned Q4 2027 into geosynchronous-type orbit (Weizmann); NASA lists 2027 launch year"
+ },
+ {
+  "survey": "ULTRASAT",
+  "survey_id": "ultrasat",
+  "release": "Public alert stream (planned)",
+  "start": null,
+  "end": null,
+  "kind": "undated",
+  "status": "target",
+  "evidence": "official",
+  "event": "alert_stream",
+  "access": "public",
+  "bands": [
+   "UV",
+   "photometric",
+   "time-domain",
+   "alerts"
+  ],
+  "url": "https://weizmann.ac.il/ultrasat/project-&-technology/ultrasat-system-design/the-science-operation-center-soc",
+  "notes": "SOC will issue public alerts for new transients within 15 minutes of image capture; no operational start date yet"
+ },
+ {
+  "survey": "Roman",
+  "survey_id": "roman",
+  "release": "RAPID public alert stream (planned)",
+  "start": null,
+  "end": null,
+  "kind": "undated",
+  "status": "target",
+  "evidence": "secondary",
+  "event": "alert_stream",
+  "access": "public",
+  "bands": [
+   "optical",
+   "IR",
+   "photometric",
+   "spectroscopic",
+   "alerts"
+  ],
+  "url": "https://rapid.ipac.caltech.edu/",
+  "notes": "Galactic Bulge Time Domain Survey alerts via RAPID pipeline, public stream planned (target <1 h image-to-alert); no operational start date"
  }
 ];
