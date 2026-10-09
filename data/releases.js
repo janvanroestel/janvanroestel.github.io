@@ -923,5 +923,43 @@ const RELEASES = [
   ],
   "url": "https://arxiv.org/pdf/2503.14579",
   "notes": "Public survey alerts planned via established brokers; no live stream confirmed"
+ },
+ {
+  "survey": "Pan-STARRS",
+  "survey_id": "panstarrs",
+  "release": "DR2 (individual exposures, 1.6 PB)",
+  "start": "2019-01-28",
+  "end": null,
+  "kind": "exact",
+  "status": "confirmed",
+  "evidence": "official",
+  "event": "data_release",
+  "access": "public",
+  "bands": [
+   "optical",
+   "photometric",
+   "time-domain"
+  ],
+  "url": "https://outerspace.stsci.edu/spaces/PANSTARRS/overview",
+  "notes": "Released by MAST on 28 Jan 2019 (earlier planned dates 2017 and 2018 slipped); first release with all individual exposures"
+ },
+ {
+  "survey": "PFS",
+  "survey_id": "pfs",
+  "release": "Science operations start (announced)",
+  "start": "2025-02-01",
+  "end": "2025-02-28",
+  "kind": "window",
+  "status": "target",
+  "evidence": "official",
+  "event": "milestone",
+  "access": "public",
+  "bands": [
+   "optical",
+   "IR",
+   "spectroscopic"
+  ],
+  "url": "https://www.mpa-garching.mpg.de/1108046/news20250113",
+  "notes": "Subaru/MPA announcement (Jan 2025): science operations to begin Feb 2025; actual start not confirmed in sources. First light date not found"
  }
 ];

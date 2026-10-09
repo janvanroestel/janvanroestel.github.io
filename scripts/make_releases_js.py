@@ -36,6 +36,8 @@ ALLOWED: dict[str, set[str]] = {
 # 'alerts' is added per row for event_type == alert_stream (public alert streams).
 SURVEY_BANDS: dict[str, list[str]] = {
     "4most": ["optical", "spectroscopic"],
+    "panstarrs": ["optical", "photometric", "time-domain"],
+    "pfs": ["optical", "IR", "spectroscopic"],
     "argus-array": ["optical", "photometric", "time-domain"],
     "atlas": ["optical", "photometric", "time-domain"],
     "blackgem": ["optical", "photometric", "time-domain"],
@@ -64,7 +66,7 @@ SURVEY_BANDS: dict[str, list[str]] = {
 }
 
 SURVEY_NAMES: dict[str, str] = {
-    "4most": "4MOST", "argus-array": "Argus Array", "atlas": "ATLAS", "blackgem": "BlackGEM",
+    "4most": "4MOST", "panstarrs": "Pan-STARRS", "pfs": "PFS", "argus-array": "Argus Array", "atlas": "ATLAS", "blackgem": "BlackGEM",
     "ls4": "LS4", "uvex": "UVEX", "weave": "WEAVE",
     "askap": "ASKAP/VAST", "chime": "CHIME/FRB", "des": "DES", "desi": "DESI",
     "einstein-probe": "Einstein Probe", "erosita": "eROSITA", "euclid": "Euclid",
