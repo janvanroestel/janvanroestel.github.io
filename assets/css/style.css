@@ -870,7 +870,6 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    .tl-figure-wrap { display: none; }
     .tl-table { font-size: 0.85rem; }
     .tl-table th, .tl-table td { padding: 0.45rem 0.4rem; }
     .tl-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
